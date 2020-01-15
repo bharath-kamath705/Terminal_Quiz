@@ -1,23 +1,28 @@
 #!/bin/bash
-# NUM_LINES="$(cat qme_questions | wc -l)"
-# cat ./qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
-# date >> ./qme_session.log 
-# date >> ./qme_alltime.log
 
-#clear qme_session.log for each session by
-#adding the foll to the end of ~/.bashrc
-#rm ~/bin/qme_session.log
+# set directory for qme program and files
+QME=${HOME}/Documents/Terminal_Quiz/
 
-QME=${HOME}/Documents/Terminal_Quiz/qme_questions.txt
-NUM_LINES="$(cat $QME | wc -l)"
+#total number of question in the question bank
+NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
 
 case "$1" in
-    -q|--question)
-        sed "$2q;d" $QME
-    ;;
-    *)
-        cat $QME | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
+	
+	#Show Nth question    
+	-q|--question)
+	sed "$2q;d" $QME/qme_questions.txt
+	;;
+
+	#remove Nth question
+	--remove)
+	head qme_questions.txt -n $2
+	;; 
+
+	#show random question     	
+	*)
+        cat $QME/qme_questions.txt | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
 esac
 
-date >> ./qme_session.log 
-date >> ./qme_alltime.log
+#logs to keep track of number of times qme was called
+date >> $QME/qme_session.log  # erased every session
+date >> $QME/qme_alltime.log  
