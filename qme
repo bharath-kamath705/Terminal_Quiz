@@ -1,4 +1,5 @@
 #!/bin/bash
+# NUM_LINES="$(cat qme_questions | wc -l)"
 # cat ./qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
 # date >> ./qme_session.log 
 # date >> ./qme_alltime.log
@@ -11,4 +12,9 @@ case "$1" in
     -q|--question)
         sed "$2q;d" qme_questions.txt
     ;;
+    *)
+        cat ./qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
 esac
+
+date >> ./qme_session.log 
+date >> ./qme_alltime.log
