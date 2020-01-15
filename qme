@@ -1,0 +1,8 @@
+#!/bin/bash
+cat ~/bin/qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
+date >>~/bin/qme_session.log 
+date >>~/bin/qme_alltime.log
+
+#clear qme_session.log for each session by
+#adding the foll to the end of ~/.bashrc
+#rm ~/bin/qme_session.log
