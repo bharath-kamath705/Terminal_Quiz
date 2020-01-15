@@ -7,78 +7,77 @@
      7	display todays date
      8	display todays date in universal time
      9	display calendar for feb 2020 and 1 month before and 1 month after
-    10	search the manual for the term 'which'
-    11	open the manual page for the which command
-    12	display everything on the desktop
-    13	display sizes and permissions of everything in the home directory
-    14	display everying and hidden files in home directory
-    15	display present working directory
-    16	display help file for pwd command
-    17	open ~/bin/qme_questions.txt in gui editor
-    18	display the sizes and permission of everthing in current directory in kb and Mb
-    19	display everything in the current directory
-    20	display everything in the current directory with folders marked by '/'
-    21	display everything in the home directory
-    22	display the contents of the file qme_questions.txt (in home directory bin folder)
-    23	clear command line history and write changes to history file
-    24	run the 50th line in the comand line history
-    25	display file type information about the qme_questions.txt file
-    26	redirect 'hello world' from stdout of cat cmd to output.txt. hint: cat listens on stdin in absense of cmd line arugments, del this file
-    27	redirect history to hist.txt. append "hello" by redirecting from echo command. del this file
-    28	redirect error of 'cat -kk blah' to error.txt. delete this file afterwards
-    29	redirect the stdout of ls to the void or bitbucket
-    30	get the address for stdin file for current terminal
-    31	open new terminal, from old terminal display contents of qme_questions.txt in new terminal (hint use tty)
-    32	display history but without index number and blank spaces (actual command starts after 7th col). use cut cmd
-    33	use the date command, display just time zone by piping to cut command
-    34	use the date command, display time of the day ex 07:36:22 PM, by piping to cut command, tee the full date to fulldate.txt
-    35	create files file1 to file100, create a text file del.txt with the text "file1 file2 .. file100", delete files by reading what to delete from the text file
-    36	for years 2017-2020 for months jan, feb, mar create folders in the format month_year. in each of those folders create 9 files in the format file1, file2 ... 
-    37	have the terminal say polo when you type the command marco by creating an alias
-    38	change directory 1 level up
-    39	change directory to root, and the directly to desktop
-    40	list anything that ends with .conf in the /etc directory (use the list command)
-    41	list anything that ends with .CONF in the /etc directory, case insensitive (use ls)
-    42	in a new folder create files: fileA1..fileA9, .... fileZ1..fileZ9. list files with any letter but num 1 or 2
-    43	in a single command make this direcotory /folder/subfolder/subsubfolder. remove all with a single command
-    44	copy the qme_questions.txt file to desktop, rename to del_me.txt.
-    45	find every .txt file in the /usr directory
-    46	find every file and every folder to a depth of 2 from your home directory
-    47	find every file in your home directory that is greater than 1Mb and less than 5Mb, list each of them with size permission etc
-    48	concatenate the bash file qme and qme_questions.txt
-    49	display the qme_questions.txt contents in reverse order
-    50	flip the history left to right
-    51	find every file every directory to full depth from  home and view results in the 'less' page viewer
-    52	view the grep manual page in the 'less' page viewer, jump to the 314th line in the page
-    53	view first 10 lines of the history
-    54	view last 10 lines of the history
-    55	update data base and locate every .txt file in the computer, check if file and symbolic link exists
-    56	sort all the files in /etc by file size largest on top in human readable
-    57	sort all the files in /etc by file size, in bytes
-    58	sort all the files by month
-    59	sort qme_qestions.txt alphabetically
-    60	open qme_questions.txt in the gui editor from the terminal
-    61	append current session infor to history 
-    62	check how many times 'qme' has been entered in the history (use grep, wc)
-    63	in the qme_question.txt file, count how many lines have "the" and how many times "the" occurs case insensitive
-    64	in the qme_question.txt file, print and count how many lines don't have the word "the"
-    65	create a gzip with all qme related files, move to desktop, check its contents, and then extract
-    66	create a zip with all qme related files, mv to desktop, check its contents and extract
-    67	add a ~/bin2 to the PATH, check if it is added by echoing the PATH variable, remove it and check again
-    68	remove executable permission of qme bash script, check the permissions, add it back and check again
-    69	create and run a bash script in the ~/bin folder(which should be on the path) called marco, it should print polo when called
-    70	create and run a bash script hi.sh on the desktop that prints "Hello World"
-    71	open the cron tab
-    72	check the os release version (ubuntu)
-    73	check cpu architecture
-    74	cron schedule for every min of every day in perpetuity (m h dom mon dow command)
-    75	cron shcedule for every min of every day only for jan, feb (m h dom mon dow command)
-    76	cron shedule for every two hours from 8am to 8pm everyday (m h dom mon dow command)
-    77	cron shcedule for every 15 min in perpetuity (m h dom mon dow command)
-    78	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
-    79	use shuf to create 100 numbers in random order in num.txt, sort using sort command
-    80	from the first 20 lines of qme_questions.txt display a random line
-    81	use the AND operator to echo "hi" and then echo "bye"
-    82	check the ubuntu release version
-    83	check the cpu architecture
-    84	search which package has the 'xeyes' app. Install it, then remove it
+    10	open the manual page for the which command
+    11	display everything on the desktop
+    12	display sizes and permissions of everything in the home directory
+    13	display everying and hidden files in home directory
+    14	display present working directory
+    15	display help file for pwd command
+    16	open ~/bin/qme_questions.txt in gui editor
+    17	display the sizes and permission of everthing in current directory in kb and Mb
+    18	display everything in the current directory
+    19	display everything in the current directory with folders marked by '/'
+    20	display everything in the home directory
+    21	display the contents of the file qme_questions.txt (in home directory bin folder)
+    22	clear command line history and write changes to history file
+    23	run the 50th line in the comand line history
+    24	display file type information about the qme_questions.txt file
+    25	redirect 'hello world' from stdout of cat cmd to output.txt. hint: cat listens on stdin in absense of cmd line arugments, del this file
+    26	redirect history to hist.txt. append "hello" by redirecting from echo command. del this file
+    27	redirect error of 'cat -kk blah' to error.txt. delete this file afterwards
+    28	redirect the stdout of ls to the void or bitbucket
+    29	get the address for stdin file for current terminal
+    30	open new terminal, from old terminal display contents of qme_questions.txt in new terminal (hint use tty)
+    31	display history but without index number and blank spaces (actual command starts after 7th col). use cut cmd
+    32	use the date command, display just time zone by piping to cut command
+    33	use the date command, display time of the day ex 07:36:22 PM, by piping to cut command, tee the full date to fulldate.txt
+    34	create files file1 to file100, create a text file del.txt with the text "file1 file2 .. file100", delete files by reading what to delete from the text file
+    35	for years 2017-2020 for months jan, feb, mar create folders in the format month_year. in each of those folders create 9 files in the format file1, file2 ... 
+    36	have the terminal say polo when you type the command marco by creating an alias
+    37	change directory 1 level up
+    38	change directory to root, and the directly to desktop
+    39	list anything that ends with .conf in the /etc directory (use the list command)
+    40	list anything that ends with .CONF in the /etc directory, case insensitive (use ls)
+    41	in a new folder create files: fileA1..fileA9, .... fileZ1..fileZ9. list files with any letter but num 1 or 2
+    42	in a single command make this direcotory /folder/subfolder/subsubfolder. remove all with a single command
+    43	copy the qme_questions.txt file to desktop, rename to del_me.txt.
+    44	find every .txt file in the /usr directory
+    45	find every file and every folder to a depth of 2 from your home directory
+    46	find every file in your home directory that is greater than 1Mb and less than 5Mb, list each of them with size permission etc
+    47	concatenate the bash file qme and qme_questions.txt
+    48	display the qme_questions.txt contents in reverse order
+    49	flip the history left to right
+    50	find every file every directory to full depth from  home and view results in the 'less' page viewer
+    51	view the grep manual page in the 'less' page viewer, jump to the 314th line in the page
+    52	view first 10 lines of the history
+    53	view last 10 lines of the history
+    54	update data base and locate every .txt file in the computer, check if file and symbolic link exists
+    55	sort all the files in /etc by file size largest on top in human readable
+    56	sort all the files in /etc by file size, in bytes
+    57	sort all the files by month
+    58	sort qme_qestions.txt alphabetically
+    59	open qme_questions.txt in the gui editor from the terminal
+    60	append current session infor to history 
+    61	check how many times 'qme' has been entered in the history (use grep, wc)
+    62	in the qme_question.txt file, count how many lines have "the" and how many times "the" occurs case insensitive
+    63	in the qme_question.txt file, print and count how many lines don't have the word "the"
+    64	create a gzip with all qme related files, move to desktop, check its contents, and then extract
+    65	create a zip with all qme related files, mv to desktop, check its contents and extract
+    66	add a ~/bin2 to the PATH, check if it is added by echoing the PATH variable, remove it and check again
+    67	remove executable permission of qme bash script, check the permissions, add it back and check again
+    68	create and run a bash script in the ~/bin folder(which should be on the path) called marco, it should print polo when called
+    69	create and run a bash script hi.sh on the desktop that prints "Hello World"
+    70	open the cron tab
+    71	check the os release version (ubuntu)
+    72	check cpu architecture
+    73	cron schedule for every min of every day in perpetuity (m h dom mon dow command)
+    74	cron shcedule for every min of every day only for jan, feb (m h dom mon dow command)
+    75	cron shedule for every two hours from 8am to 8pm everyday (m h dom mon dow command)
+    76	cron shcedule for every 15 min in perpetuity (m h dom mon dow command)
+    77	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
+    78	use shuf to create 100 numbers in random order in num.txt, sort using sort command
+    79	from the first 20 lines of qme_questions.txt display a random line
+    80	use the AND operator to echo "hi" and then echo "bye"
+    81	check the ubuntu release version
+    82	check the cpu architecture
+    83	search which package has the 'xeyes' app. Install it, then remove it

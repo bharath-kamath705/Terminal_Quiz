@@ -1,25 +1,40 @@
 #!/bin/bash
 
-# set directory for qme program and files
-QME=${HOME}/Documents/Terminal_Quiz/
+#set directory for qme program and files
+QME=${HOME}/Documents/Terminal_Quiz
 
 #total number of question in the question bank
 NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
 
 case "$1" in
-	
-	#Show Nth question    
+
 	-q|--question)
+	#Show Nth question  
+	#----------------------------------------
 	sed "$2q;d" $QME/qme_questions.txt
 	;;
 
-	#remove Nth question
+
 	--remove)
-	head qme_questions.txt -n $2
+	#remove Nth question
+	#----------------------------------------
+
+	#remove question and write to tmp.txt	
+	let top=$2-1
+	let bot=$NUM_LINES-$2	
+	head $QME/qme_questions.txt -n $top >$QME/tmp.txt
+	tail $QME/qme_questions.txt -n $bot >>$QME/tmp.txt
+	
+
+	#re-number lines and remove tmp.txt
+	cut $QME/tmp.txt --fields 2 | cat -n | tee $QME/qme_questions.txt >/dev/null
+	rm tmp.txt	
 	;; 
 
-	#show random question     	
+
 	*)
+	#show random question     	
+	#----------------------------------------
         cat $QME/qme_questions.txt | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
 esac
 
