@@ -2,8 +2,8 @@
 Question bank of Linux terminal exercises and a program to display questions at random and track progress
 
 INSTRUCTIONS\
-create the alias: ""alias qme="~/Documents/Terminal_Quiz/qme \
-adding the foll to the end of ~/.bashrc "rm ~/bin/qme_session.log" \ 
+create the alias: alias qme="~/Documents/Terminal_Quiz/qme" \
+adding the foll to the end of ~/.bashrc: "rm ~/bin/qme_session.log" \ 
 
 NAME \
   qme - displays a random question
@@ -15,10 +15,10 @@ NAME \
   -a, --answer N\
       shows the answer to the Nth question
   
-  -c=N\
+  -c N\
       shows the number times qme was called in this terminal session
   
-  -t=N\
+  -t N\
       shows the total number of times qme was called
   
   --remove N\

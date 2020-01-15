@@ -1,0 +1,84 @@
+     1	neercs eht raelc
+     2	gnitroba yb tpmorp ot nruter .retne neht ,tac epyt
+     3	esuom on .ti esolc neht dna lanimret wen a nepo
+     4	HTAP llehs eht no gnihtyreve yalpsid
+     5	dnammoc ohce fo yrotcerid yalpsid
+     6	radnelac 9102 ced wohs
+     7	etad syadot yalpsid
+     8	emit lasrevinu ni etad syadot yalpsid
+     9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
+    10	'hcihw' mret eht rof launam eht hcraes
+    11	dnammoc hcihw eht rof egap launam eht nepo
+    12	potksed eht no gnihtyreve yalpsid
+    13	yrotcerid emoh eht ni gnihtyreve fo snoissimrep dna sezis yalpsid
+    14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
+    15	yrotcerid gnikrow tneserp yalpsid
+    16	dnammoc dwp rof elif pleh yalpsid
+    17	rotide iug ni txt.snoitseuq_emq/nib/~ nepo
+    18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
+    19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
+    20	'/' yb dekram sredlof htiw yrotcerid tnerruc eht ni gnihtyreve yalpsid
+    21	yrotcerid emoh eht ni gnihtyreve yalpsid
+    22	)redlof nib yrotcerid emoh ni( txt.snoitseuq_emq elif eht fo stnetnoc eht yalpsid
+    23	elif yrotsih ot segnahc etirw dna yrotsih enil dnammoc raelc
+    24	yrotsih enil dnamoc eht ni enil ht05 eht nur
+    25	elif txt.snoitseuq_emq eht tuoba noitamrofni epyt elif yalpsid
+    26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
+    27	elif siht led .dnammoc ohce morf gnitcerider yb "olleh" dneppa .txt.tsih ot yrotsih tcerider
+    28	sdrawretfa elif siht eteled .txt.rorre ot 'halb kk- tac' fo rorre tcerider
+    29	tekcubtib ro diov eht ot sl fo tuodts eht tcerider
+    30	lanimret tnerruc rof elif nidts rof sserdda eht teg
+    31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
+    32	dmc tuc esu .)loc ht7 retfa strats dnammoc lautca( secaps knalb dna rebmun xedni tuohtiw tub yrotsih yalpsid
+    33	dnammoc tuc ot gnipip yb enoz emit tsuj yalpsid ,dnammoc etad eht esu
+    34	txt.etadlluf ot etad lluf eht eet ,dnammoc tuc ot gnipip yb ,MP 22:63:70 xe yad eht fo emit yalpsid ,dnammoc etad eht esu
+    35	elif txet eht morf eteled ot tahw gnidaer yb selif eteled ,"001elif .. 2elif 1elif" txet eht htiw txt.led elif txet a etaerc ,001elif ot 1elif selif etaerc
+    36	 ... 2elif ,1elif tamrof eht ni selif 9 etaerc sredlof esoht fo hcae ni .raey_htnom tamrof eht ni sredlof etaerc ram ,bef ,naj shtnom rof 0202-7102 sraey rof
+    37	saila na gnitaerc yb ocram dnammoc eht epyt uoy nehw olop yas lanimret eht evah
+    38	pu level 1 yrotcerid egnahc
+    39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
+    40	)dnammoc tsil eht esu( yrotcerid cte/ eht ni fnoc. htiw sdne taht gnihtyna tsil
+    41	)sl esu( evitisnesni esac ,yrotcerid cte/ eht ni FNOC. htiw sdne taht gnihtyna tsil
+    42	2 ro 1 mun tub rettel yna htiw selif tsil .9Zelif..1Zelif .... ,9Aelif..1Aelif :selif etaerc redlof wen a ni
+    43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
+    44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
+    45	yrotcerid rsu/ eht ni elif txt. yreve dnif
+    46	yrotcerid emoh ruoy morf 2 fo htped a ot redlof yreve dna elif yreve dnif
+    47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
+    48	txt.snoitseuq_emq dna emq elif hsab eht etanetacnoc
+    49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
+    50	thgir ot tfel yrotsih eht pilf
+    51	reweiv egap 'ssel' eht ni stluser weiv dna emoh  morf htped lluf ot yrotcerid yreve elif yreve dnif
+    52	egap eht ni enil ht413 eht ot pmuj ,reweiv egap 'ssel' eht ni egap launam perg eht weiv
+    53	yrotsih eht fo senil 01 tsrif weiv
+    54	yrotsih eht fo senil 01 tsal weiv
+    55	stsixe knil cilobmys dna elif fi kcehc ,retupmoc eht ni elif txt. yreve etacol dna esab atad etadpu
+    56	elbadaer namuh ni pot no tsegral ezis elif yb cte/ ni selif eht lla tros
+    57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
+    58	htnom yb selif eht lla tros
+    59	yllacitebahpla txt.snoitseq_emq tros
+    60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
+    61	 yrotsih ot rofni noisses tnerruc dneppa
+    62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
+    63	evitisnesni esac srucco "eht" semit ynam woh dna "eht" evah senil ynam woh tnuoc ,elif txt.noitseuq_emq eht ni
+    64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
+    65	tcartxe neht dna ,stnetnoc sti kcehc ,potksed ot evom ,selif detaler emq lla htiw pizg a etaerc
+    66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
+    67	niaga kcehc dna ti evomer ,elbairav HTAP eht gniohce yb dedda si ti fi kcehc ,HTAP eht ot 2nib/~ a dda
+    68	niaga kcehc dna kcab ti dda ,snoissimrep eht kcehc ,tpircs hsab emq fo noissimrep elbatucexe evomer
+    69	dellac nehw olop tnirp dluohs ti ,ocram dellac )htap eht no eb dluohs hcihw(redlof nib/~ eht ni tpircs hsab a nur dna etaerc
+    70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
+    71	bat norc eht nepo
+    72	)utnubu( noisrev esaeler so eht kcehc
+    73	erutcetihcra upc kcehc
+    74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
+    75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
+    76	)dnammoc wod nom mod h m( yadyreve mp8 ot ma8 morf sruoh owt yreve rof eludehs norc
+    77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
+    78	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludehs norc
+    79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
+    80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
+    81	"eyb" ohce neht dna "ih" ohce ot rotarepo DNA eht esu
+    82	noisrev esaeler utnubu eht kcehc
+    83	erutcetihcra upc eht kcehc
+    84	ti evomer neht ,ti llatsnI .ppa 'seyex' eht sah egakcap hcihw hcraes

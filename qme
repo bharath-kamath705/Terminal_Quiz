@@ -14,21 +14,31 @@ case "$1" in
 	sed "$2q;d" $QME/qme_questions.txt
 	;;
 
+	-a|--answer)
+	#Show Nth question and answer  
+	#----------------------------------------
+	sed "$2q;d" $QME/qme_answers.txt
+	;;
+
 
 	--remove)
-	#remove Nth question
-	#----------------------------------------
-
-	#remove question and write to tmp.txt	
+	#remove Nth question and answer
+	#----------------------------------------	
 	let top=$2-1
 	let bot=$NUM_LINES-$2	
-	head $QME/qme_questions.txt -n $top >$QME/tmp.txt
-	tail $QME/qme_questions.txt -n $bot >>$QME/tmp.txt
 	
+	#remove question and write to qtmp.txt
+	head $QME/qme_questions.txt -n $top >$QME/qtmp.txt
+	tail $QME/qme_questions.txt -n $bot >>$QME/qtmp.txt
 
-	#re-number lines and remove tmp.txt
-	cut $QME/tmp.txt --fields 2 | cat -n | tee $QME/qme_questions.txt >/dev/null
-	rm tmp.txt	
+	#remove answer and write to atmp.txt
+	head $QME/qme_answers.txt -n $top >$QME/atmp.txt
+	tail $QME/qme_answers.txt -n $bot >>$QME/atmp.txt
+
+	#re-number lines and remove qtmp.txt and atmp.txt
+	cut $QME/qtmp.txt --fields 2 | cat -n | tee $QME/qme_questions.txt >/dev/null
+	cut $QME/atmp.txt --fields 2 | cat -n | tee $QME/qme_answers.txt >/dev/null	
+	rm $QME/qtmp.txt $QME/atmp.txt	
 	;; 
 
 
