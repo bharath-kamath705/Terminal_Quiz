@@ -5,22 +5,22 @@ NAME \
   qme - displays a random question
   
  OPTIONS \
-  -q, --question=N
+  -q, --question=N \
       shows the Nth question
       
-  -a, --answer=N
+  -a, --answer=N\
       shows the answer to the Nth question
   
-  -c=N
+  -c=N\
       shows the number times qme was called in this terminal session
   
-  -t=N
+  -t=N\
       shows the total number of times qme was called
   
-  --remove=N
+  --remove=N\
       permanantly removes Nth question
   
-  --add=[question],[answer]
+  --add=[question],[answer]\
       adds a question and answer to the bank
       
       
