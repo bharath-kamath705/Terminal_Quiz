@@ -8,15 +8,15 @@
 #adding the foll to the end of ~/.bashrc
 #rm ~/bin/qme_session.log
 
-QME_QUESTIONS='/home/zeus/Documents/Terminal_Quiz/qme_questions.txt'
-NUM_LINES="$(cat $QME_QUESTIONS | wc -l)"
+QME=${HOME}/Documents/Terminal_Quiz/qme_questions.txt
+NUM_LINES="$(cat $QME | wc -l)"
 
 case "$1" in
     -q|--question)
-        sed "$2q;d" $QME_QUESTIONS
+        sed "$2q;d" $QME
     ;;
     *)
-        cat $QME_QUESTIONS | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
+        cat $QME | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
 esac
 
 date >> ./qme_session.log 
