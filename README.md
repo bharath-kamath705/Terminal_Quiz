@@ -1,10 +1,10 @@
 # Terminal_Quiz
 Question bank of Linux terminal exercises and a program to display questions at random and track progress
 
-NAME
+NAME \
   qme - displays a random question
   
- OPTIONS
+ OPTIONS \
   -q, --question=N
       shows the Nth question
       
