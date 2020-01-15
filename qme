@@ -10,10 +10,10 @@
 
 case "$1" in
     -q|--question)
-        sed "$2q;d" qme_questions.txt
+        sed "$2q;d" ~/Documents/Terminal_Quiz/qme_questions.txt
     ;;
     *)
-        cat ./qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
+        cat ~/Documents/Terminal_Quiz/qme_questions.txt | head -n $(shuf -i 1-84 -n 1) | tail -n 1
 esac
 
 date >> ./qme_session.log 
