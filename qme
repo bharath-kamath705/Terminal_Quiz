@@ -32,6 +32,22 @@ case "$1" in
 	sed "$2q;d" $QME/qme_answers.txt
 	;;
 
+	-e)
+	#Edit Nth question  
+	#----------------------------------------
+	cat $QME/qme_questions.txt | cut --fields 2 | sed "$2 c$3"| cat -n >$QME/qtmp.txt
+	rm $QME/qme_questions.txt
+	mv $QME/qtmp.txt $QME/qme_questions.txt	
+	;;
+
+	-f)
+	#Edit Nth answer  
+	#----------------------------------------
+	cat $QME/qme_answers.txt | cut --fields 2 | sed "$2 c$3"| cat -n >$QME/atmp.txt
+	rm $QME/qme_answers.txt
+	mv $QME/atmp.txt $QME/qme_answers.txt	
+	;;
+
 	--add)
 	#add question and answer to the database  
 	#----------------------------------------

@@ -2,12 +2,12 @@
 Commandline based flashcard program for Linux. Default question-bank with basic Linux terminal commands and excerices
 
 ### INSTRUCTIONS
-create the alias: `alias qme="~/Documents/Terminal_Quiz/qme"` \
-adding the foll to the end of ~/.bashrc: `rm ~/bin/qme_session.log` 
-move the manpage `mv qme.1 /usr/local/man/man1/` 
+move the manpage `mv qme.1 /usr/local/man/man1/`\
+add the foll to the end of ~/.bashrc: `rm ~/bin/qme_session.log` \
+create the alias: `alias qme="~/Documents/Terminal_Quiz/qme"` 
 
 ### NAME 
-qme - displays a random question
+qme - flashcard management program
   
  ### OPTIONS 
 
@@ -22,6 +22,12 @@ qme - displays a random question
       
   >-a, --answer &lt;question number&gt;\
       shows the answer to the Nth question.
+
+  >-e &lt;"question num"&gt;  &lt;"new question" &gt;\
+      edit or replace indicated question
+
+  >-f &lt;"answer num"&gt;  &lt;"new answer" &gt;\
+      edit or replace indicated answer
   
   >--add &lt;"question"&gt;  &lt;"answer" &gt;\
       adds a question and answer to the bank

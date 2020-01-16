@@ -77,7 +77,7 @@
     77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
     78	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludehs norc
     79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
-    80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
+    80	hello world
     81	"eyb" ohce neht dna "ih" ohce ot rotarepo DNA eht esu
     82	noisrev esaeler utnubu eht kcehc
     83	erutcetihcra upc eht kcehc
