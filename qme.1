@@ -9,72 +9,63 @@ qme \- flashcard management program
 qme [\f[I]option\f[R]]
 .SH DESCRIPTION
 .PP
-Displays a random question from a question-bank. Provides tools to modify, edit and maintain the question and answer database. Preloaded with basic Linux terminal exercises.
+Displays a random question from a question-bank. Provides tools to edit and maintain the question and answer database. Preloaded with basic Linux terminal exercises.
 
 
-\f[C]
-iconv \-t utf\-8 input.txt | blahprog | iconv \-f utf\-8
-\f[R]
+
 .fi
 .SH OPTIONS
 .TP
-.B \-f \f[I]FORMAT\f[R], \-r \f[I]FORMAT\f[R], \-\-from=\f[I]FORMAT\f[R], \-\-read=\f[I]FORMAT\f[R]
-Specify input format.
-\f[I]FORMAT\f[R] can be \f[C]native\f[R] (native Haskell),
-\f[C]markdown\f[R] (markdown or plain text), \f[C]rst\f[R]
-(reStructuredText), \f[C]html\f[R] (HTML), or \f[C]latex\f[R] (LaTeX).
-If \f[C]+lhs\f[R] is appended to \f[C]markdown\f[R], \f[C]rst\f[R], or
-\f[C]latex\f[R], the input will be treated as literate Haskell source.
+.B \-c  
+Display number of times a random question was shown during this terminal session.
+
 .TP
-.B \-t \f[I]FORMAT\f[R], \-w \f[I]FORMAT\f[R], \-\-to=\f[I]FORMAT\f[R], \-\-write=\f[I]FORMAT\f[R]
-Specify output format.
-\f[I]FORMAT\f[R] can be \f[C]native\f[R] (native Haskell),
-\f[C]plain\f[R] (plain text), \f[C]markdown\f[R] (markdown),
-\f[C]rst\f[R] (reStructuredText), \f[C]html\f[R] (HTML), \f[C]latex\f[R]
-(LaTeX),the output will be rendered as
-literate Haskell source.
+.B \-t 
+Display total number of times a random question was shown.
+
 .TP
-.B \-s, \-\-standalone
-Produce output with an appropriate header and footer (e.g.\ a standalone
-HTML, LaTeX, or RTF file, not a fragment).
+.B \-q, \-\-question \f[I]NUM\f[R]
+Display \f[I]NUM\f[R]th question in the question-bank.
+
 .TP
-.B \-o \f[I]FILE\f[R], \-\-output=\f[I]FILE\f[R]
-Write output to \f[I]FILE\f[R] instead of \f[I]stdout\f[R].
-If \f[I]FILE\f[R] is \[ga]\f[C]\-\f[R]\[cq], output will go to
-\f[I]stdout\f[R].
+.B \-a, \-\-answer \f[I]NUM\f[R]
+Display \f[I]NUM\f[R]th answer in the answer-bank
+
 .TP
-.B \-p, \-\-preserve\-tabs
-Preserve tabs instead of converting them to spaces.
+.B \-\-add <\f[I]question\f[R]>  <\f[I]answer\f[R]>
+Add a question and answer to the database.
+
+.TP
+.B \-\-remove \f[I]NUM\f[R]
+Remove \f[I]NUM\f[R]th question and answer in the database
+.TP
+
+.B \-\-clear\-log
+Clear alltime log. This sets total count of random questions seen to zero.
+.TP
+
+.B \-\-reset
+Reset the question and answer database to default.
 .TP
 
 \f[R]
 .fi
 .SH EXAMPLES
 .PP
-If no \f[I]input\-file\f[R] is specified, input is read from
-\f[I]stdin\f[R].
-Otherwise, the \f[I]input\-files\f[R] are concatenated (with a blank
-line between each) and used as input.
-Output goes to \f[I]stdout\f[R] by default (though output to
-\f[I]stdout\f[R] is disabled for the \f[C]odt\f[R] and \f[C]epub\f[R]
-output formats).
-For output to a file, use the \f[C]\-o\f[R] option:
+To add the question "How many vowels in the alphabet" and corresponding answer "5":
+
 .IP
 .nf
 \f[C]
-blahprog \-o output.html input.txt
+qme --add "How many vowels in the alphabet" "5"
 \f[R]
 .fi
 
-blahprog uses the UTF\-8 character encoding for both input and output.
-If your local character encoding is not UTF\-8, you should pipe input
-and output through \f[C]iconv\f[R]:
-.IP
-.nf
+\f[R]
+.fi
+.SH AUTHORS
 .PP
-\f[C]markdown2pdf\f[R] (1).
-The \f[I]README\f[R] file distributed with blahprog contains full
-documentation.
-.PP
-The blahprog source code and all documentation may be downloaded from
-<http://johnmacfarlane.net/blahprog/>.
+Bharath & Gautham
+
+https://github.com/bharath-kamath705 \p
+https://github.com/doctor-entropy
