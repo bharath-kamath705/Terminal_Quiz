@@ -9,7 +9,7 @@
      9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
     10	'hcihw' mret eht rof launam eht hcraes
     11	dnammoc hcihw eht rof egap launam eht nepo
-    12	potksed eht no gnihtyreve yalpsid
+    12	~/Desktop
     13	yrotcerid emoh eht ni gnihtyreve fo snoissimrep dna sezis yalpsid
     14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
     15	yrotcerid gnikrow tneserp yalpsid
@@ -26,7 +26,7 @@
     26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
     27	elif siht led .dnammoc ohce morf gnitcerider yb "olleh" dneppa .txt.tsih ot yrotsih tcerider
     28	sdrawretfa elif siht eteled .txt.rorre ot 'halb kk- tac' fo rorre tcerider
-    29	tekcubtib ro diov eht ot sl fo tuodts eht tcerider
+    29	ls > /dev/null
     30	lanimret tnerruc rof elif nidts rof sserdda eht teg
     31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
     32	dmc tuc esu .)loc ht7 retfa strats dnammoc lautca( secaps knalb dna rebmun xedni tuohtiw tub yrotsih yalpsid
@@ -42,7 +42,7 @@
     42	2 ro 1 mun tub rettel yna htiw selif tsil .9Zelif..1Zelif .... ,9Aelif..1Aelif :selif etaerc redlof wen a ni
     43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
     44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
-    45	yrotcerid rsu/ eht ni elif txt. yreve dnif
+    45	find /usr -name "*.txt"
     46	yrotcerid emoh ruoy morf 2 fo htped a ot redlof yreve dna elif yreve dnif
     47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
     48	txt.snoitseuq_emq dna emq elif hsab eht etanetacnoc
