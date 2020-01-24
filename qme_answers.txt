@@ -1,6 +1,6 @@
      1	neercs eht raelc
      2	gnitroba yb tpmorp ot nruter .retne neht ,tac epyt
-     3	esuom on .ti esolc neht dna lanimret wen a nepo
+     3	alt ctrl T ; ctrl D
      4	HTAP llehs eht no gnihtyreve yalpsid
      5	dnammoc ohce fo yrotcerid yalpsid
      6	radnelac 9102 ced wohs
@@ -43,7 +43,7 @@
     43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
     44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
     45	find /usr -name "*.txt"
-    46	yrotcerid emoh ruoy morf 2 fo htped a ot redlof yreve dna elif yreve dnif
+    46	find ~/ -maxdepth 2
     47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
     48	cat qme qme_questions.txt
     49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
@@ -60,11 +60,11 @@
     60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
     61	 yrotsih ot rofni noisses tnerruc dneppa
     62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
-    63	evitisnesni esac srucco "eht" semit ynam woh dna "eht" evah senil ynam woh tnuoc ,elif txt.noitseuq_emq eht ni
+    63	cat qme_questions.txt | grep "the" -o | wc -l
     64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
     65	tcartxe neht dna ,stnetnoc sti kcehc ,potksed ot evom ,selif detaler emq lla htiw pizg a etaerc
     66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
-    67	niaga kcehc dna ti evomer ,elbairav HTAP eht gniohce yb dedda si ti fi kcehc ,HTAP eht ot 2nib/~ a dda
+    67	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2"
     68	niaga kcehc dna kcab ti dda ,snoissimrep eht kcehc ,tpircs hsab emq fo noissimrep elbatucexe evomer
     69	echo -e '#!bin/bash \n echo polo\' >> marco
     70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
@@ -73,7 +73,7 @@
     73	erutcetihcra upc kcehc
     74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
     75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
-    76	)dnammoc wod nom mod h m( yadyreve mp8 ot ma8 morf sruoh owt yreve rof eludehs norc
+    76	0 8-20/2 * * *
     77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
     78	*/15 * * * *
     79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
