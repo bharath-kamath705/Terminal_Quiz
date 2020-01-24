@@ -10,10 +10,10 @@
     10	'hcihw' mret eht rof launam eht hcraes
     11	dnammoc hcihw eht rof egap launam eht nepo
     12	~/Desktop
-    13	yrotcerid emoh eht ni gnihtyreve fo snoissimrep dna sezis yalpsid
+    13	ls ~ -la
     14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
     15	yrotcerid gnikrow tneserp yalpsid
-    16	dnammoc dwp rof elif pleh yalpsid
+    16	help pwd
     17	rotide iug ni txt.snoitseuq_emq/nib/~ nepo
     18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
     19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
@@ -24,16 +24,16 @@
     24	yrotsih enil dnamoc eht ni enil ht05 eht nur
     25	elif txt.snoitseuq_emq eht tuoba noitamrofni epyt elif yalpsid
     26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
-    27	elif siht led .dnammoc ohce morf gnitcerider yb "olleh" dneppa .txt.tsih ot yrotsih tcerider
+    27	history > hist.txt; echo "hello" >> hist.txt
     28	sdrawretfa elif siht eteled .txt.rorre ot 'halb kk- tac' fo rorre tcerider
     29	ls > /dev/null
     30	lanimret tnerruc rof elif nidts rof sserdda eht teg
     31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
     32	dmc tuc esu .)loc ht7 retfa strats dnammoc lautca( secaps knalb dna rebmun xedni tuohtiw tub yrotsih yalpsid
-    33	dnammoc tuc ot gnipip yb enoz emit tsuj yalpsid ,dnammoc etad eht esu
-    34	txt.etadlluf ot etad lluf eht eet ,dnammoc tuc ot gnipip yb ,MP 22:63:70 xe yad eht fo emit yalpsid ,dnammoc etad eht esu
+    33	date | cut --delimiter " " --fields 5
+    34	date |tee fulldate.txt | cut --delimiter " " --fields 4
     35	elif txet eht morf eteled ot tahw gnidaer yb selif eteled ,"001elif .. 2elif 1elif" txet eht htiw txt.led elif txet a etaerc ,001elif ot 1elif selif etaerc
-    36	 ... 2elif ,1elif tamrof eht ni selif 9 etaerc sredlof esoht fo hcae ni .raey_htnom tamrof eht ni sredlof etaerc ram ,bef ,naj shtnom rof 0202-7102 sraey rof
+    36	mkdir {jan,feb,mar}_{2017..2020} && touch {jan,feb,mar}_{2017..2020}/file{1..9}
     37	saila na gnitaerc yb ocram dnammoc eht epyt uoy nehw olop yas lanimret eht evah
     38	pu level 1 yrotcerid egnahc
     39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
@@ -45,7 +45,7 @@
     45	find /usr -name "*.txt"
     46	yrotcerid emoh ruoy morf 2 fo htped a ot redlof yreve dna elif yreve dnif
     47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
-    48	txt.snoitseuq_emq dna emq elif hsab eht etanetacnoc
+    48	cat qme qme_questions.txt
     49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
     50	thgir ot tfel yrotsih eht pilf
     51	reweiv egap 'ssel' eht ni stluser weiv dna emoh  morf htped lluf ot yrotcerid yreve elif yreve dnif
@@ -55,7 +55,7 @@
     55	stsixe knil cilobmys dna elif fi kcehc ,retupmoc eht ni elif txt. yreve etacol dna esab atad etadpu
     56	elbadaer namuh ni pot no tsegral ezis elif yb cte/ ni selif eht lla tros
     57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
-    58	htnom yb selif eht lla tros
+    58	ls -l | sort -k 6M
     59	yllacitebahpla txt.snoitseq_emq tros
     60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
     61	 yrotsih ot rofni noisses tnerruc dneppa
@@ -66,7 +66,7 @@
     66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
     67	niaga kcehc dna ti evomer ,elbairav HTAP eht gniohce yb dedda si ti fi kcehc ,HTAP eht ot 2nib/~ a dda
     68	niaga kcehc dna kcab ti dda ,snoissimrep eht kcehc ,tpircs hsab emq fo noissimrep elbatucexe evomer
-    69	dellac nehw olop tnirp dluohs ti ,ocram dellac )htap eht no eb dluohs hcihw(redlof nib/~ eht ni tpircs hsab a nur dna etaerc
+    69	echo -e '#!bin/bash \n echo polo\' >> marco
     70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
     71	bat norc eht nepo
     72	)utnubu( noisrev esaeler so eht kcehc
@@ -75,10 +75,10 @@
     75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
     76	)dnammoc wod nom mod h m( yadyreve mp8 ot ma8 morf sruoh owt yreve rof eludehs norc
     77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
-    78	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludehs norc
+    78	*/15 * * * *
     79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
     80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
-    81	"eyb" ohce neht dna "ih" ohce ot rotarepo DNA eht esu
+    81	echo "hi" && echo "bye"
     82	noisrev esaeler utnubu eht kcehc
     83	erutcetihcra upc eht kcehc
     84	ti evomer neht ,ti llatsnI .ppa 'seyex' eht sah egakcap hcihw hcraes
