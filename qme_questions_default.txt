@@ -14,7 +14,7 @@
     14	display everying and hidden files in home directory
     15	display present working directory
     16	display help file for pwd command
-    17	open ~/bin/qme_questions.txt in gui editor
+    17	open qme_questions.txt in gui editor
     18	display the sizes and permission of everthing in current directory in kb and Mb
     19	display everything in the current directory
     20	display everything in the current directory with folders marked by '/'
@@ -38,7 +38,7 @@
     38	change directory 1 level up
     39	change directory to root, and the directly to desktop
     40	list anything that ends with .conf in the /etc directory (use the list command)
-    41	list anything that ends with .CONF in the /etc directory, case insensitive (use ls)
+    41	list anything that ends with .CONF in the /etc directory, case insensitive
     42	in a new folder create files: fileA1..fileA9, .... fileZ1..fileZ9. list files with any letter but num 1 or 2
     43	in a single command make this direcotory /folder/subfolder/subsubfolder. remove all with a single command
     44	copy the qme_questions.txt file to desktop, rename to del_me.txt.
@@ -49,7 +49,7 @@
     49	display the qme_questions.txt contents in reverse order
     50	flip the history left to right
     51	find every file every directory to full depth from  home and view results in the 'less' page viewer
-    52	view the grep manual page in the 'less' page viewer, jump to the 314th line in the page
+    52	number the lines in the man page for grep, view results in 'less' page viewer, bring 314 line into view
     53	view first 10 lines of the history
     54	view last 10 lines of the history
     55	update data base and locate every .txt file in the computer, check if file and symbolic link exists
@@ -57,28 +57,24 @@
     57	sort all the files in /etc by file size, in bytes
     58	sort all the files by month
     59	sort qme_qestions.txt alphabetically
-    60	open qme_questions.txt in the gui editor from the terminal
-    61	append current session infor to history 
-    62	check how many times 'qme' has been entered in the history (use grep, wc)
-    63	in the qme_question.txt file, count how many lines have "the" and how many times "the" occurs case insensitive
-    64	in the qme_question.txt file, print and count how many lines don't have the word "the"
-    65	create a gzip with all qme related files, move to desktop, check its contents, and then extract
-    66	create a zip with all qme related files, mv to desktop, check its contents and extract
-    67	add a ~/bin2 to the PATH, check if it is added by echoing the PATH variable, remove it and check again
-    68	remove executable permission of qme bash script, check the permissions, add it back and check again
-    69	create and run a bash script in the ~/bin folder(which should be on the path) called marco, it should print polo when called
-    70	create and run a bash script hi.sh on the desktop that prints "Hello World"
-    71	open the cron tab
-    72	check the os release version (ubuntu)
-    73	check cpu architecture
-    74	cron schedule for every min of every day in perpetuity (m h dom mon dow command)
-    75	cron shcedule for every min of every day only for jan, feb (m h dom mon dow command)
-    76	cron shedule for every two hours from 8am to 8pm everyday (m h dom mon dow command)
-    77	cron shcedule for every 15 min in perpetuity (m h dom mon dow command)
-    78	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
-    79	use shuf to create 100 numbers in random order in num.txt, sort using sort command
-    80	from the first 20 lines of qme_questions.txt display a random line
-    81	use the AND operator to echo "hi" and then echo "bye"
-    82	check the ubuntu release version
-    83	check the cpu architecture
-    84	search which package has the 'xeyes' app. Install it, then remove it
+    60	append current session infor to history 
+    61	check how many times 'qme' has been entered in the history (use grep, wc)
+    62	in the qme_question.txt file, count how many lines have "the" and how many times "the" occurs case insensitive
+    63	in the qme_question.txt file, print and count how many lines don't have the word "the"
+    64	create a gzip with all qme related files, move to desktop, check its contents, and then extract
+    65	create a zip with all qme related files, mv to desktop, check its contents and extract
+    66	add a ~/bin2 to the PATH, check if it is added by echoing the PATH variable, remove it and check again
+    67	remove executable permission of qme bash script, check the permissions, add it back and check again
+    68	create and run a bash script in the ~/bin folder(which should be on the path) called marco, it should print polo when called
+    69	create and run a bash script hi.sh on the desktop that prints "Hello World"
+    70	open the cron tab
+    71	check the os release version (ubuntu)
+    72	check cpu architecture
+    73	cron schedule for every min of every day in perpetuity (m h dom mon dow command)
+    74	cron shcedule for every min of every day only for jan, feb (m h dom mon dow command)
+    75	cron shedule for every two hours from 8am to 8pm everyday (m h dom mon dow command)
+    76	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
+    77	use shuf to create 100 numbers in random order in num.txt, sort using sort command
+    78	from the first 20 lines of qme_questions.txt display a random line
+    79	use the AND operator to echo "hi" and then echo "bye"
+    80	search which package has the 'xeyes' app. Install it, then remove it

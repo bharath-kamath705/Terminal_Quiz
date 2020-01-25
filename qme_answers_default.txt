@@ -1,84 +1,80 @@
-     1	neercs eht raelc
-     2	gnitroba yb tpmorp ot nruter .retne neht ,tac epyt
-     3	esuom on .ti esolc neht dna lanimret wen a nepo
-     4	HTAP llehs eht no gnihtyreve yalpsid
-     5	dnammoc ohce fo yrotcerid yalpsid
-     6	radnelac 9102 ced wohs
-     7	etad syadot yalpsid
-     8	emit lasrevinu ni etad syadot yalpsid
-     9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
-    10	'hcihw' mret eht rof launam eht hcraes
-    11	dnammoc hcihw eht rof egap launam eht nepo
-    12	potksed eht no gnihtyreve yalpsid
-    13	yrotcerid emoh eht ni gnihtyreve fo snoissimrep dna sezis yalpsid
-    14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
-    15	yrotcerid gnikrow tneserp yalpsid
-    16	dnammoc dwp rof elif pleh yalpsid
-    17	rotide iug ni txt.snoitseuq_emq/nib/~ nepo
-    18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
-    19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
-    20	'/' yb dekram sredlof htiw yrotcerid tnerruc eht ni gnihtyreve yalpsid
-    21	yrotcerid emoh eht ni gnihtyreve yalpsid
-    22	)redlof nib yrotcerid emoh ni( txt.snoitseuq_emq elif eht fo stnetnoc eht yalpsid
-    23	elif yrotsih ot segnahc etirw dna yrotsih enil dnammoc raelc
-    24	yrotsih enil dnamoc eht ni enil ht05 eht nur
-    25	elif txt.snoitseuq_emq eht tuoba noitamrofni epyt elif yalpsid
-    26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
-    27	elif siht led .dnammoc ohce morf gnitcerider yb "olleh" dneppa .txt.tsih ot yrotsih tcerider
-    28	sdrawretfa elif siht eteled .txt.rorre ot 'halb kk- tac' fo rorre tcerider
-    29	tekcubtib ro diov eht ot sl fo tuodts eht tcerider
-    30	lanimret tnerruc rof elif nidts rof sserdda eht teg
-    31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
-    32	dmc tuc esu .)loc ht7 retfa strats dnammoc lautca( secaps knalb dna rebmun xedni tuohtiw tub yrotsih yalpsid
-    33	dnammoc tuc ot gnipip yb enoz emit tsuj yalpsid ,dnammoc etad eht esu
-    34	txt.etadlluf ot etad lluf eht eet ,dnammoc tuc ot gnipip yb ,MP 22:63:70 xe yad eht fo emit yalpsid ,dnammoc etad eht esu
-    35	elif txet eht morf eteled ot tahw gnidaer yb selif eteled ,"001elif .. 2elif 1elif" txet eht htiw txt.led elif txet a etaerc ,001elif ot 1elif selif etaerc
-    36	 ... 2elif ,1elif tamrof eht ni selif 9 etaerc sredlof esoht fo hcae ni .raey_htnom tamrof eht ni sredlof etaerc ram ,bef ,naj shtnom rof 0202-7102 sraey rof
-    37	saila na gnitaerc yb ocram dnammoc eht epyt uoy nehw olop yas lanimret eht evah
-    38	pu level 1 yrotcerid egnahc
-    39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
-    40	)dnammoc tsil eht esu( yrotcerid cte/ eht ni fnoc. htiw sdne taht gnihtyna tsil
-    41	)sl esu( evitisnesni esac ,yrotcerid cte/ eht ni FNOC. htiw sdne taht gnihtyna tsil
-    42	2 ro 1 mun tub rettel yna htiw selif tsil .9Zelif..1Zelif .... ,9Aelif..1Aelif :selif etaerc redlof wen a ni
-    43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
-    44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
-    45	yrotcerid rsu/ eht ni elif txt. yreve dnif
-    46	yrotcerid emoh ruoy morf 2 fo htped a ot redlof yreve dna elif yreve dnif
-    47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
-    48	txt.snoitseuq_emq dna emq elif hsab eht etanetacnoc
-    49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
-    50	thgir ot tfel yrotsih eht pilf
-    51	reweiv egap 'ssel' eht ni stluser weiv dna emoh  morf htped lluf ot yrotcerid yreve elif yreve dnif
-    52	egap eht ni enil ht413 eht ot pmuj ,reweiv egap 'ssel' eht ni egap launam perg eht weiv
-    53	yrotsih eht fo senil 01 tsrif weiv
-    54	yrotsih eht fo senil 01 tsal weiv
-    55	stsixe knil cilobmys dna elif fi kcehc ,retupmoc eht ni elif txt. yreve etacol dna esab atad etadpu
-    56	elbadaer namuh ni pot no tsegral ezis elif yb cte/ ni selif eht lla tros
-    57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
-    58	htnom yb selif eht lla tros
-    59	yllacitebahpla txt.snoitseq_emq tros
-    60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
-    61	 yrotsih ot rofni noisses tnerruc dneppa
-    62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
-    63	evitisnesni esac srucco "eht" semit ynam woh dna "eht" evah senil ynam woh tnuoc ,elif txt.noitseuq_emq eht ni
-    64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
-    65	tcartxe neht dna ,stnetnoc sti kcehc ,potksed ot evom ,selif detaler emq lla htiw pizg a etaerc
-    66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
-    67	niaga kcehc dna ti evomer ,elbairav HTAP eht gniohce yb dedda si ti fi kcehc ,HTAP eht ot 2nib/~ a dda
-    68	niaga kcehc dna kcab ti dda ,snoissimrep eht kcehc ,tpircs hsab emq fo noissimrep elbatucexe evomer
-    69	dellac nehw olop tnirp dluohs ti ,ocram dellac )htap eht no eb dluohs hcihw(redlof nib/~ eht ni tpircs hsab a nur dna etaerc
-    70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
-    71	bat norc eht nepo
-    72	)utnubu( noisrev esaeler so eht kcehc
-    73	erutcetihcra upc kcehc
-    74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
-    75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
-    76	)dnammoc wod nom mod h m( yadyreve mp8 ot ma8 morf sruoh owt yreve rof eludehs norc
-    77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
-    78	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludehs norc
-    79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
-    80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
-    81	"eyb" ohce neht dna "ih" ohce ot rotarepo DNA eht esu
-    82	noisrev esaeler utnubu eht kcehc
-    83	erutcetihcra upc eht kcehc
-    84	ti evomer neht ,ti llatsnI .ppa 'seyex' eht sah egakcap hcihw hcraes
+     1	clear or ctrl L
+     2	ctrl c to abort
+     3	alt ctrl T ; ctrl D
+     4	echo "$PATH" 
+     5	which echo
+     6	cal 12 2019
+     7	date
+     8	date -u
+     9	cal 02 2020 -A 1 -B 1
+    10	man -k which
+    11	man which
+    12	~/Desktop
+    13	ls ~ -la
+    14	ls -a ~/
+    15	pwd
+    16	help pwd
+    17	gedit [path]/qme_questions.txt ; for Windows: notepad.exe [path]/qme_questions.txt
+    18	ls -lha
+    19	ls -la
+    20	ls -F
+    21	ls -lha ~
+    22	cat qme_questions.txt
+    23	history -c -w
+    24	!50
+    25	file qme_questions.txt
+    26	echo "hello world" | cat > output.txt
+    27	history > hist.txt; echo "hello" >> hist.txt
+    28	cat -kk blah 2> error.txt
+    29	ls > /dev/null
+    30	tty
+    31	cat qme_answers.txt >> /dev/tty2
+    32	history | cut -c 1-7 --complement
+    33	date | cut --delimiter " " --fields 5
+    34	date |tee fulldate.txt | cut --delimiter " " --fields 4
+    35	touch file{1..100} ; echo file {1..100} > del.txt ; cat del.txt |xargs rm
+    36	mkdir {jan,feb,mar}_{2017..2020} && touch {jan,feb,mar}_{2017..2020}/file{1..9}
+    37	in .bashrc add: alias marco="echo polo" 
+    38	cd ..
+    39	cd / ; cd ~/Desktop/
+    40	ls /etc/*.conf
+    41	find /etc/ -maxdepth 1 -iname "*.CONF"
+    42	touch file{A..Z}{1..9}; ls file?[1,2]
+    43	mkdir -p ./folder/subfolder/subsubfolder ; rm -r ./folder
+    44	cp qme_questions.txt ~/Desktop/del_me.txt
+    45	find /usr -name "*.txt"
+    46	find ~/ -maxdepth 2
+    47	find ~/ -type f -size +1M -size -5M -exec ls -lh {} ;
+    48	cat qme qme_questions.txt
+    49	tac qme_questions.txt
+    50	history | rev
+    51	find ~/ | less
+    52	man grep | cat -n | less ; (type 314e to scroll some 300 lines)
+    53	history | head
+    54	history | tail
+    55	sudo updatedb; locate -e --follow /*.txt
+    56	ls -lh /etc | sort -k 5hr
+    57	ls -l /etc/ | sort -k 5n 
+    58	ls -l | sort -k 6M
+    59	qme_questions.txt | cut --fields 2 | sort
+    60	history -a
+    61	history | grep qme | wc -l
+    62	cat qme_questions.txt | grep "the" -o | wc -l
+    63	cat qme_questions.txt | grep "the" -v | wc -l
+    64	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
+    65	zip qme_backup.zip; unzip -l; unzip qme_backup.zip
+    66	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
+    67	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
+    68	echo -e '#!bin/bash \necho polo\' >> marco
+    69	echo -e '#!bin/bash \necho hello world' >> ~/Desktop/hi.sh ; bash ~/Desktop/hi.sh 
+    70	crontab -e
+    71	lsb_release -a
+    72	uname -m
+    73	* * * * *
+    74	* * * JAN,FEB *
+    75	0 8-20/2 * * *
+    76	*/15 * * * *
+    77	shuf -i 1-100 -n 100 > num.txt ; cat num.txt | sort -n
+    78	cat qme_questions.txt | head -n $(shuf -i 1-20 -n 1) | tail -n 1
+    79	echo "hi" && echo "bye"
+    80	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps
