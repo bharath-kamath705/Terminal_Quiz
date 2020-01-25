@@ -65,12 +65,12 @@
     65	zip qme_backup.zip; unzip -l; unzip qme_backup.zip
     66	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
     67	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
-    68	echo -e '#!bin/bash \n echo polo\' >> marco
-    69	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
+    68	echo -e '#!bin/bash \necho polo\' >> marco
+    69	echo -e '#!bin/bash \necho hello world' >> ~/Desktop/hi.sh ; bash ~/Desktop/hi.sh 
     70	crontab -e
     71	lsb_release -a
     72	uname -m
-    73	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
+    73	* * * * *
     74	* * * JAN,FEB *
     75	0 8-20/2 * * *
     76	*/15 * * * *
