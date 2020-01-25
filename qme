@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set directory for qme program and files
-QME=${HOME}/Documents/Terminal_Quiz
+QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 #total number of question in the question bank
 NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"

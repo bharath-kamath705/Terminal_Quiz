@@ -3,7 +3,7 @@ Commandline based flashcard program for Linux. Default question-bank with basic 
 
 ### INSTRUCTIONS
 move the manpage `mv qme.1 /usr/local/man/man1/`\
-add the foll to the end of ~/.bashrc: `rm ~/bin/qme_session.log` \
+add the foll to the end of ~/.bashrc: `rm ~/Documents/Terminal_Quiz/qme_session.log` \
 create the alias: `alias qme="~/Documents/Terminal_Quiz/qme"` 
 
 ### NAME 
