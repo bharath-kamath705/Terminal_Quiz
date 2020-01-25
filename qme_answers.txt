@@ -3,7 +3,7 @@
      3	alt ctrl T ; ctrl D
      4	HTAP llehs eht no gnihtyreve yalpsid
      5	dnammoc ohce fo yrotcerid yalpsid
-     6	radnelac 9102 ced wohs
+     6	cal 12 2019
      7	etad syadot yalpsid
      8	emit lasrevinu ni etad syadot yalpsid
      9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
@@ -18,14 +18,14 @@
     18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
     19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
     20	'/' yb dekram sredlof htiw yrotcerid tnerruc eht ni gnihtyreve yalpsid
-    21	yrotcerid emoh eht ni gnihtyreve yalpsid
+    21	ls -lha ~
     22	)redlof nib yrotcerid emoh ni( txt.snoitseuq_emq elif eht fo stnetnoc eht yalpsid
     23	elif yrotsih ot segnahc etirw dna yrotsih enil dnammoc raelc
     24	yrotsih enil dnamoc eht ni enil ht05 eht nur
     25	elif txt.snoitseuq_emq eht tuoba noitamrofni epyt elif yalpsid
     26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
     27	history > hist.txt; echo "hello" >> hist.txt
-    28	sdrawretfa elif siht eteled .txt.rorre ot 'halb kk- tac' fo rorre tcerider
+    28	cat -kk blah 2> error.txt
     29	ls > /dev/null
     30	lanimret tnerruc rof elif nidts rof sserdda eht teg
     31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
@@ -38,8 +38,8 @@
     38	pu level 1 yrotcerid egnahc
     39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
     40	)dnammoc tsil eht esu( yrotcerid cte/ eht ni fnoc. htiw sdne taht gnihtyna tsil
-    41	)sl esu( evitisnesni esac ,yrotcerid cte/ eht ni FNOC. htiw sdne taht gnihtyna tsil
-    42	2 ro 1 mun tub rettel yna htiw selif tsil .9Zelif..1Zelif .... ,9Aelif..1Aelif :selif etaerc redlof wen a ni
+    41	find /etc/ -maxdepth 1 -iname "*.CONF"
+    42	touch file{A..Z}{1..9}; ls file?[1,2]
     43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
     44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
     45	find /usr -name "*.txt"
@@ -56,7 +56,7 @@
     56	elbadaer namuh ni pot no tsegral ezis elif yb cte/ ni selif eht lla tros
     57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
     58	ls -l | sort -k 6M
-    59	yllacitebahpla txt.snoitseq_emq tros
+    59	qme_questions.txt | cut --fields 2 | sort
     60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
     61	 yrotsih ot rofni noisses tnerruc dneppa
     62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
@@ -64,21 +64,21 @@
     64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
     65	tcartxe neht dna ,stnetnoc sti kcehc ,potksed ot evom ,selif detaler emq lla htiw pizg a etaerc
     66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
-    67	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2"
-    68	niaga kcehc dna kcab ti dda ,snoissimrep eht kcehc ,tpircs hsab emq fo noissimrep elbatucexe evomer
+    67	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
+    68	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
     69	echo -e '#!bin/bash \n echo polo\' >> marco
     70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
     71	bat norc eht nepo
-    72	)utnubu( noisrev esaeler so eht kcehc
+    72	lsb_release -a
     73	erutcetihcra upc kcehc
     74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
     75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
     76	0 8-20/2 * * *
-    77	)dnammoc wod nom mod h m( ytiuteprep ni nim 51 yreve rof eludechs norc
+    77	*/15 * * * *
     78	*/15 * * * *
     79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
     80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
     81	echo "hi" && echo "bye"
     82	noisrev esaeler utnubu eht kcehc
     83	erutcetihcra upc eht kcehc
-    84	ti evomer neht ,ti llatsnI .ppa 'seyex' eht sah egakcap hcihw hcraes
+    84	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps

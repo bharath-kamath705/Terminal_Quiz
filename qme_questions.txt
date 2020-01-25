@@ -38,7 +38,7 @@
     38	change directory 1 level up
     39	change directory to root, and the directly to desktop
     40	list anything that ends with .conf in the /etc directory (use the list command)
-    41	list anything that ends with .CONF in the /etc directory, case insensitive (use ls)
+    41	list anything that ends with .CONF in the /etc directory, case insensitive
     42	in a new folder create files: fileA1..fileA9, .... fileZ1..fileZ9. list files with any letter but num 1 or 2
     43	in a single command make this direcotory /folder/subfolder/subsubfolder. remove all with a single command
     44	copy the qme_questions.txt file to desktop, rename to del_me.txt.
