@@ -1,33 +1,33 @@
      1	neercs eht raelc
-     2	gnitroba yb tpmorp ot nruter .retne neht ,tac epyt
+     2	ctrl c to abort
      3	alt ctrl T ; ctrl D
-     4	HTAP llehs eht no gnihtyreve yalpsid
-     5	dnammoc ohce fo yrotcerid yalpsid
+     4	echo "$PATH" 
+     5	which echo
      6	cal 12 2019
-     7	etad syadot yalpsid
+     7	date
      8	emit lasrevinu ni etad syadot yalpsid
      9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
     10	'hcihw' mret eht rof launam eht hcraes
-    11	dnammoc hcihw eht rof egap launam eht nepo
+    11	man which
     12	~/Desktop
     13	ls ~ -la
     14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
     15	yrotcerid gnikrow tneserp yalpsid
     16	help pwd
-    17	rotide iug ni txt.snoitseuq_emq/nib/~ nepo
+    17	gedit [path]/qme_questions.txt ; for Windows: notepad.exe [path]/qme_questions.txt
     18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
     19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
-    20	'/' yb dekram sredlof htiw yrotcerid tnerruc eht ni gnihtyreve yalpsid
+    20	ls -F
     21	ls -lha ~
     22	)redlof nib yrotcerid emoh ni( txt.snoitseuq_emq elif eht fo stnetnoc eht yalpsid
-    23	elif yrotsih ot segnahc etirw dna yrotsih enil dnammoc raelc
+    23	history -c -w
     24	yrotsih enil dnamoc eht ni enil ht05 eht nur
     25	elif txt.snoitseuq_emq eht tuoba noitamrofni epyt elif yalpsid
     26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
     27	history > hist.txt; echo "hello" >> hist.txt
     28	cat -kk blah 2> error.txt
     29	ls > /dev/null
-    30	lanimret tnerruc rof elif nidts rof sserdda eht teg
+    30	tty
     31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
     32	dmc tuc esu .)loc ht7 retfa strats dnammoc lautca( secaps knalb dna rebmun xedni tuohtiw tub yrotsih yalpsid
     33	date | cut --delimiter " " --fields 5
@@ -37,7 +37,7 @@
     37	saila na gnitaerc yb ocram dnammoc eht epyt uoy nehw olop yas lanimret eht evah
     38	pu level 1 yrotcerid egnahc
     39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
-    40	)dnammoc tsil eht esu( yrotcerid cte/ eht ni fnoc. htiw sdne taht gnihtyna tsil
+    40	ls /etc/*.conf
     41	find /etc/ -maxdepth 1 -iname "*.CONF"
     42	touch file{A..Z}{1..9}; ls file?[1,2]
     43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
@@ -47,11 +47,11 @@
     47	cte noissimrep ezis htiw meht fo hcae tsil ,bM5 naht ssel dna bM1 naht retaerg si taht yrotcerid emoh ruoy ni elif yreve dnif
     48	cat qme qme_questions.txt
     49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
-    50	thgir ot tfel yrotsih eht pilf
+    50	history | rev
     51	reweiv egap 'ssel' eht ni stluser weiv dna emoh  morf htped lluf ot yrotcerid yreve elif yreve dnif
     52	egap eht ni enil ht413 eht ot pmuj ,reweiv egap 'ssel' eht ni egap launam perg eht weiv
-    53	yrotsih eht fo senil 01 tsrif weiv
-    54	yrotsih eht fo senil 01 tsal weiv
+    53	history | head
+    54	history | tail
     55	stsixe knil cilobmys dna elif fi kcehc ,retupmoc eht ni elif txt. yreve etacol dna esab atad etadpu
     56	elbadaer namuh ni pot no tsegral ezis elif yb cte/ ni selif eht lla tros
     57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
@@ -62,7 +62,7 @@
     62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
     63	cat qme_questions.txt | grep "the" -o | wc -l
     64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
-    65	tcartxe neht dna ,stnetnoc sti kcehc ,potksed ot evom ,selif detaler emq lla htiw pizg a etaerc
+    65	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
     66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
     67	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
     68	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
@@ -72,10 +72,10 @@
     72	lsb_release -a
     73	uname -m
     74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
-    75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
+    75	* * * JAN,FEB *
     76	0 8-20/2 * * *
     77	*/15 * * * *
     78	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
-    79	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
+    79	cat qme_questions.txt | head -n $(shuf -i 1-20 -n 1) | tail -n 1
     80	echo "hi" && echo "bye"
     81	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps

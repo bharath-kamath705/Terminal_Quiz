@@ -14,7 +14,7 @@
     14	display everying and hidden files in home directory
     15	display present working directory
     16	display help file for pwd command
-    17	open ~/bin/qme_questions.txt in gui editor
+    17	open qme_questions.txt in gui editor
     18	display the sizes and permission of everthing in current directory in kb and Mb
     19	display everything in the current directory
     20	display everything in the current directory with folders marked by '/'
