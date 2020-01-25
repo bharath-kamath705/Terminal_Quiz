@@ -1,4 +1,4 @@
-     1	neercs eht raelc
+     1	clear or ctrl L
      2	ctrl c to abort
      3	alt ctrl T ; ctrl D
      4	echo "$PATH" 
@@ -6,37 +6,37 @@
      6	cal 12 2019
      7	date
      8	date -u
-     9	retfa htnom 1 dna erofeb htnom 1 dna 0202 bef rof radnelac yalpsid
+     9	cal 02 2020 -A 1 -B 1
     10	man -k which
     11	man which
     12	~/Desktop
     13	ls ~ -la
-    14	yrotcerid emoh ni selif neddih dna gniyreve yalpsid
+    14	ls -a ~/
     15	pwd
     16	help pwd
     17	gedit [path]/qme_questions.txt ; for Windows: notepad.exe [path]/qme_questions.txt
-    18	bM dna bk ni yrotcerid tnerruc ni gnihtreve fo noissimrep dna sezis eht yalpsid
-    19	yrotcerid tnerruc eht ni gnihtyreve yalpsid
+    18	ls -lha
+    19	ls -la
     20	ls -F
     21	ls -lha ~
-    22	)redlof nib yrotcerid emoh ni( txt.snoitseuq_emq elif eht fo stnetnoc eht yalpsid
+    22	cat qme_questions.txt
     23	history -c -w
-    24	yrotsih enil dnamoc eht ni enil ht05 eht nur
+    24	!50
     25	file qme_questions.txt
-    26	elif siht led ,stnemgura enil dmc fo esnesba ni nidts no snetsil tac :tnih .txt.tuptuo ot dmc tac fo tuodts morf 'dlrow olleh' tcerider
+    26	echo "hello world" | cat > output.txt
     27	history > hist.txt; echo "hello" >> hist.txt
     28	cat -kk blah 2> error.txt
     29	ls > /dev/null
     30	tty
-    31	)ytt esu tnih( lanimret wen ni txt.snoitseuq_emq fo stnetnoc yalpsid lanimret dlo morf ,lanimret wen nepo
+    31	cat qme_answers.txt >> /dev/tty2
     32	history | cut -c 1-7 --complement
     33	date | cut --delimiter " " --fields 5
     34	date |tee fulldate.txt | cut --delimiter " " --fields 4
-    35	elif txet eht morf eteled ot tahw gnidaer yb selif eteled ,"001elif .. 2elif 1elif" txet eht htiw txt.led elif txet a etaerc ,001elif ot 1elif selif etaerc
+    35	touch file{1..100} ; echo file {1..100} > del.txt ; cat del.txt |xargs rm
     36	mkdir {jan,feb,mar}_{2017..2020} && touch {jan,feb,mar}_{2017..2020}/file{1..9}
-    37	saila na gnitaerc yb ocram dnammoc eht epyt uoy nehw olop yas lanimret eht evah
-    38	pu level 1 yrotcerid egnahc
-    39	potksed ot yltcerid eht dna ,toor ot yrotcerid egnahc
+    37	in .bashrc add: alias marco="echo polo" 
+    38	cd ..
+    39	cd / ; cd ~/Desktop/
     40	ls /etc/*.conf
     41	find /etc/ -maxdepth 1 -iname "*.CONF"
     42	touch file{A..Z}{1..9}; ls file?[1,2]
@@ -68,7 +68,7 @@
     68	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
     69	echo -e '#!bin/bash \n echo polo\' >> marco
     70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
-    71	bat norc eht nepo
+    71	crontab -e
     72	lsb_release -a
     73	uname -m
     74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
