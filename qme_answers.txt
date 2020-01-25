@@ -40,42 +40,41 @@
     40	ls /etc/*.conf
     41	find /etc/ -maxdepth 1 -iname "*.CONF"
     42	touch file{A..Z}{1..9}; ls file?[1,2]
-    43	dnammoc elgnis a htiw lla evomer .redlofbusbus/redlofbus/redlof/ yrotocerid siht ekam dnammoc elgnis a ni
-    44	.txt.em_led ot emaner ,potksed ot elif txt.snoitseuq_emq eht ypoc
+    43	mkdir -p ./folder/subfolder/subsubfolder ; rm -r ./folder
+    44	cp qme_questions.txt ~/Desktop/del_me.txt
     45	find /usr -name "*.txt"
     46	find ~/ -maxdepth 2
     47	find ~/ -type f -size +1M -size -5M -exec ls -lh {} ;
     48	cat qme qme_questions.txt
-    49	redro esrever ni stnetnoc txt.snoitseuq_emq eht yalpsid
+    49	tac qme_questions.txt
     50	history | rev
-    51	reweiv egap 'ssel' eht ni stluser weiv dna emoh  morf htped lluf ot yrotcerid yreve elif yreve dnif
-    52	egap eht ni enil ht413 eht ot pmuj ,reweiv egap 'ssel' eht ni egap launam perg eht weiv
+    51	find ~/ | less
+    52	man grep | cat -n | less ; (type 314e to scroll some 300 lines)
     53	history | head
     54	history | tail
-    55	stsixe knil cilobmys dna elif fi kcehc ,retupmoc eht ni elif txt. yreve etacol dna esab atad etadpu
+    55	sudo updatedb; locate -e --follow /*.txt
     56	ls -lh /etc | sort -k 5hr
-    57	setyb ni ,ezis elif yb cte/ ni selif eht lla tros
+    57	ls -l /etc/ | sort -k 5n 
     58	ls -l | sort -k 6M
     59	qme_questions.txt | cut --fields 2 | sort
-    60	lanimret eht morf rotide iug eht ni txt.snoitseuq_emq nepo
-    61	 yrotsih ot rofni noisses tnerruc dneppa
-    62	)cw ,perg esu( yrotsih eht ni deretne neeb sah 'emq' semit ynam woh kcehc
-    63	cat qme_questions.txt | grep "the" -o | wc -l
-    64	"eht" drow eht evah t'nod senil ynam woh tnuoc dna tnirp ,elif txt.noitseuq_emq eht ni
-    65	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
-    66	tcartxe dna stnetnoc sti kcehc ,potksed ot vm ,selif detaler emq lla htiw piz a etaerc
-    67	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
-    68	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
-    69	echo -e '#!bin/bash \n echo polo\' >> marco
-    70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
-    71	crontab -e
-    72	lsb_release -a
-    73	uname -m
-    74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
-    75	* * * JAN,FEB *
-    76	0 8-20/2 * * *
-    77	*/15 * * * *
-    78	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
-    79	cat qme_questions.txt | head -n $(shuf -i 1-20 -n 1) | tail -n 1
-    80	echo "hi" && echo "bye"
-    81	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps
+    60	history -a
+    61	history | grep qme | wc -l
+    62	cat qme_questions.txt | grep "the" -o | wc -l
+    63	cat qme_questions.txt | grep "the" -v | wc -l
+    64	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
+    65	zip qme_backup.zip; unzip -l; unzip qme_backup.zip
+    66	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
+    67	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
+    68	echo -e '#!bin/bash \n echo polo\' >> marco
+    69	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
+    70	crontab -e
+    71	lsb_release -a
+    72	uname -m
+    73	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
+    74	* * * JAN,FEB *
+    75	0 8-20/2 * * *
+    76	*/15 * * * *
+    77	shuf -i 1-100 -n 100 > num.txt ; cat num.txt | sort -n
+    78	cat qme_questions.txt | head -n $(shuf -i 1-20 -n 1) | tail -n 1
+    79	echo "hi" && echo "bye"
+    80	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps
