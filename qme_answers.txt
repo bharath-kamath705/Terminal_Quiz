@@ -70,15 +70,12 @@
     70	"dlroW olleH" stnirp taht potksed eht no hs.ih tpircs hsab a nur dna etaerc
     71	bat norc eht nepo
     72	lsb_release -a
-    73	erutcetihcra upc kcehc
+    73	uname -m
     74	)dnammoc wod nom mod h m( ytiuteprep ni yad yreve fo nim yreve rof eludehcs norc
     75	)dnammoc wod nom mod h m( bef ,naj rof ylno yad yreve fo nim yreve rof eludechs norc
     76	0 8-20/2 * * *
     77	*/15 * * * *
-    78	*/15 * * * *
-    79	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
-    80	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
-    81	echo "hi" && echo "bye"
-    82	noisrev esaeler utnubu eht kcehc
-    83	erutcetihcra upc eht kcehc
-    84	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps
+    78	dnammoc tros gnisu tros ,txt.mun ni redro modnar ni srebmun 001 etaerc ot fuhs esu
+    79	enil modnar a yalpsid txt.snoitseuq_emq fo senil 02 tsrif eht morf
+    80	echo "hi" && echo "bye"
+    81	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps

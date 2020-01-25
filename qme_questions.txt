@@ -74,11 +74,8 @@
     74	cron schedule for every min of every day in perpetuity (m h dom mon dow command)
     75	cron shcedule for every min of every day only for jan, feb (m h dom mon dow command)
     76	cron shedule for every two hours from 8am to 8pm everyday (m h dom mon dow command)
-    77	cron shcedule for every 15 min in perpetuity (m h dom mon dow command)
-    78	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
-    79	use shuf to create 100 numbers in random order in num.txt, sort using sort command
-    80	from the first 20 lines of qme_questions.txt display a random line
-    81	use the AND operator to echo "hi" and then echo "bye"
-    82	check the ubuntu release version
-    83	check the cpu architecture
-    84	search which package has the 'xeyes' app. Install it, then remove it
+    77	cron shedule for every 15 min in perpetuity (m h dom mon dow command)
+    78	use shuf to create 100 numbers in random order in num.txt, sort using sort command
+    79	from the first 20 lines of qme_questions.txt display a random line
+    80	use the AND operator to echo "hi" and then echo "bye"
+    81	search which package has the 'xeyes' app. Install it, then remove it
