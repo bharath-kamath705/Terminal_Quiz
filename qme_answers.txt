@@ -56,7 +56,7 @@
     56	ls -lh /etc | sort -k 5hr
     57	ls -l /etc/ | sort -k 5n 
     58	ls -l | sort -k 6M
-    59	qme_questions.txt | cut --fields 2 | sort
+    59	cat qme_questions.txt | sort -k 2
     60	history -a
     61	history | grep qme | wc -l
     62	cat qme_questions.txt | grep "the" -o | wc -l
