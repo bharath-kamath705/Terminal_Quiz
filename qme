@@ -6,6 +6,35 @@ QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #total number of question in the question bank
 NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
 
+chk_int(){
+
+	# fails if input is empty or not a positive integer
+	local CHK_VAR="${*}"
+	
+	# head -n expects an integer 
+	pwd | head -n ${CHK_VAR} >/dev/null 2>/dev/null
+	
+	if [[ ${?} -ne 0 ]]
+	then 
+		echo "Input not an integer." >&2
+		exit 1
+	fi
+}
+
+chk_str(){
+	# fails if input is empty
+	local CHK_VAR="${*}"
+	local FLAG=0
+	
+	FLAG=$(echo ${CHK_VAR} | wc -w)
+	
+	if [[ ${FLAG} -eq 0 ]]
+	then 
+		echo "Invalid input." >&2
+		exit 1
+	fi
+}
+
 if [[ ${#} -eq 0 ]]
 then
 	#show random question     	
@@ -49,17 +78,52 @@ case "$1" in
 	#Edit Nth question  
 	#----------------------------------------
 	
-	cat $QME/qme_questions.txt | cut --fields 2 | sed "$2 c$3"| cat -n >$QME/qtmp.txt
+	read -p "Enter question number you want to edit: " Q_NUM
+	
+	# check for invalid input
+	chk_int ${Q_NUM}
+	
+	echo -e "\nCurrent Entry:"
+	sed "${Q_NUM}q;d" $QME/qme_questions.txt
+	
+	echo
+	read -p "Enter the new question: " QUESTION
+	
+	# check for wrong input
+	chk_str ${QUESTION}
+	
+	cat $QME/qme_questions.txt | cut --fields 2 | sed "${Q_NUM} c${QUESTION}"| cat -n >$QME/qtmp.txt
 	rm $QME/qme_questions.txt
-	mv $QME/qtmp.txt $QME/qme_questions.txt	
+	mv $QME/qtmp.txt $QME/qme_questions.txt
+
+	echo -e "\nNew Entry:"
+	sed "${Q_NUM}q;d" $QME/qme_questions.txt	
 	;;
 
 	-f)
 	#Edit Nth answer  
 	#----------------------------------------
-	cat $QME/qme_answers.txt | cut --fields 2 | sed "$2 c$3"| cat -n >$QME/atmp.txt
+	read -p "Enter answer number you want to edit: " ANS_NUM
+	
+	# check for invalid input
+	chk_int ${ANS_NUM}
+	
+	echo -e "\nCurrent Entry:"
+	sed "${ANS_NUM}q;d" $QME/qme_answers.txt
+	
+	echo
+	read -p "Enter the new answer: " ANS
+	
+	# check for wrong input
+	chk_str ${ANS}
+	
+	# replace answer on file 
+	cat $QME/qme_answers.txt | cut --fields 2 | sed "$ANS_NUM c$ANS"| cat -n >$QME/atmp.txt
 	rm $QME/qme_answers.txt
 	mv $QME/atmp.txt $QME/qme_answers.txt	
+	
+	echo -e "\nNew Entry:"
+	sed "${ANS_NUM}q;d" $QME/qme_answers.txt
 	;;
 
 	--add)
@@ -109,7 +173,8 @@ case "$1" in
 
 
 	*)
-
+	echo "Invalid Option" >&2
+	exit 1
 
 esac
 
