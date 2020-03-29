@@ -3,16 +3,14 @@
 #set directory for qme program and files
 QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-#total number of question in the question bank
-NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
 
 chk_int(){
 
 	# fails if input is empty or not a positive integer
 	local CHK_VAR="${*}"
 	
-	# head -n expects an integer 
-	pwd | head -n ${CHK_VAR} >/dev/null 2>/dev/null
+	# shuf -i expects an integer 
+	shuf -i 1-${CHK_VAR} >/dev/null 2>/dev/null
 	
 	if [[ ${?} -ne 0 ]]
 	then 
@@ -140,7 +138,19 @@ case "$1" in
 
 	--remove)
 	#remove Nth question and answer
-	#----------------------------------------	
+	#----------------------------------------
+	# check for wrong input
+	chk_int $2
+	
+	# check if input is less than number of questions/answers
+	#total number of question in the question bank
+	NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
+	if [[ ${2} -gt ${NUM_LINES} ]]
+	then
+		echo "Invalid input. Enter a number less than or equal to ${NUM_LINES}" >&2
+		exit 1
+	fi
+	
 	let top=$2-1
 	let bot=$NUM_LINES-$2	
 	
@@ -156,6 +166,7 @@ case "$1" in
 	cut $QME/qtmp.txt --fields 2 | cat -n | tee $QME/qme_questions.txt >/dev/null
 	cut $QME/atmp.txt --fields 2 | cat -n | tee $QME/qme_answers.txt >/dev/null	
 	rm $QME/qtmp.txt $QME/atmp.txt	
+	echo "Removed."
 	;;
 
 	--clear-log)
