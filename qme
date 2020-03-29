@@ -33,18 +33,25 @@ chk_str(){
 	fi
 }
 
+# record the question number of most recent random question seen
+if [[ -f $QME/most_recent.log ]]
+	then
+		MOST_REC=$(cat ${QME}/most_recent.log | cut --fields 1 | cut -c 1-4 --complement)
+	else
+		MOST_REC="f" # assigned letter so an integer check fails"
+fi
+
 if [[ ${#} -eq 0 ]]
 then
 	#show random question     	
 	#----------------------------------------
-	cat $QME/qme_questions.txt | shuf | head -n 1
-	
+	cat $QME/qme_questions.txt | shuf | head -n 1 |tee most_recent.log
+		
 	#logs to keep track of number of random questions shown
 	date >> $QME/qme_session.log  # erased every session
 	date >> $QME/qme_alltime.log
 	exit 0
 fi
-
 
 case "$1" in
 
@@ -63,13 +70,27 @@ case "$1" in
 	-q|--question)
 	#Show Nth question  
 	#----------------------------------------
-	sed "$2q;d" $QME/qme_questions.txt
+	if [[ ${#} -eq 1 ]]
+	then
+		chk_int ${MOST_REC} # fail if most recent question does not exist
+		sed "${MOST_REC}q;d" $QME/qme_questions.txt
+	else
+		chk_int $2 # check for valid argument
+		sed "$2q;d" $QME/qme_questions.txt
+	fi
 	;;
 
 	-a|--answer)
 	#Show Nth answer  
 	#----------------------------------------
-	sed "$2q;d" $QME/qme_answers.txt
+	if [[ ${#} -eq 1 ]]
+	then
+		chk_int ${MOST_REC} # fail if most recent question does not exist
+		sed "${MOST_REC}q;d" $QME/qme_answers.txt
+	else
+		chk_int $2 # check for valid argument
+		sed "$2q;d" $QME/qme_answers.txt
+	fi
 	;;
 
 	-e)
