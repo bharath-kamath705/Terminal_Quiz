@@ -127,13 +127,24 @@ case "$1" in
 	--add)
 	#add question and answer to the database  
 	#----------------------------------------
-	echo $2 | cat -n >>$QME/qme_questions.txt
-	echo $3 | cat -n >>$QME/qme_answers.txt
+	read -p "Enter the new question: " NEW_QUES
+	
+	# check for wrong input
+	chk_str ${NEW_QUES}
+	
+	read -p "Enter the new answer: " NEW_ANS
+	
+	# check for wrong input
+	chk_str ${NEW_ANS}
+	
+	echo ${NEW_QUES} | cat -n >>$QME/qme_questions.txt
+	echo ${NEW_ANS} | cat -n >>$QME/qme_answers.txt
 	cut $QME/qme_questions.txt --fields 2 | cat -n > $QME/qme_questions_tmp.txt
 	cut $QME/qme_answers.txt --fields 2 | cat -n > $QME/qme_answers_tmp.txt
 	rm $QME/qme_answers.txt $QME/qme_questions.txt
 	mv $QME/qme_answers_tmp.txt $QME/qme_answers.txt
 	mv $QME/qme_questions_tmp.txt $QME/qme_questions.txt
+	echo "Done."
 	;;
 
 	--remove)
