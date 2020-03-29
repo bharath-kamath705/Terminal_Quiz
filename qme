@@ -6,6 +6,19 @@ QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #total number of question in the question bank
 NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
 
+if [[ ${#} -eq 0 ]]
+then
+	#show random question     	
+	#----------------------------------------
+	cat $QME/qme_questions.txt | shuf | head -n 1
+	
+	#logs to keep track of number of random questions shown
+	date >> $QME/qme_session.log  # erased every session
+	date >> $QME/qme_alltime.log
+	exit 0
+fi
+
+
 case "$1" in
 
 	-c)
@@ -35,6 +48,7 @@ case "$1" in
 	-e)
 	#Edit Nth question  
 	#----------------------------------------
+	
 	cat $QME/qme_questions.txt | cut --fields 2 | sed "$2 c$3"| cat -n >$QME/qtmp.txt
 	rm $QME/qme_questions.txt
 	mv $QME/qtmp.txt $QME/qme_questions.txt	
@@ -95,13 +109,7 @@ case "$1" in
 
 
 	*)
-	#show random question     	
-	#----------------------------------------
-        cat $QME/qme_questions.txt | head -n $(shuf -i 1-${NUM_LINES} -n 1) | tail -n 1
-	
-	#logs to keep track of number of random questions shown
-	date >> $QME/qme_session.log  # erased every session
-	date >> $QME/qme_alltime.log  
+
 
 esac
 
