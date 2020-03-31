@@ -45,7 +45,7 @@ if [[ ${#} -eq 0 ]]
 then
 	#show random question     	
 	#----------------------------------------
-	cat $QME/qme_questions.txt | shuf | head -n 1 |tee most_recent.log
+	cat $QME/qme_questions.txt | shuf | head -n 1 |tee ${QME}/most_recent.log
 		
 	#logs to keep track of number of random questions shown
 	date >> $QME/qme_session.log  # erased every session
