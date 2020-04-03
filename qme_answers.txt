@@ -62,7 +62,7 @@
     62	cat qme_questions.txt | grep "the" -o | wc -l
     63	cat qme_questions.txt | grep "the" -v | wc -l
     64	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
-    65	zip qme_backup.zip; unzip -l; unzip qme_backup.zip
+    65	zip -r qme_backup.zip ./Terminal_Quiz; unzip -l; unzip qme_backup.zip
     66	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
     67	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
     68	echo -e '#!bin/bash \necho polo\' >> marco
