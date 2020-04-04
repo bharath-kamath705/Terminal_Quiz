@@ -4,7 +4,7 @@
 QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # set default deck
-DECK="deck_bash_scripting"
+DECK=$(cat ${QME}/active_deck.log)
 
 chk_int(){
 
@@ -56,6 +56,24 @@ then
 fi
 
 case "$1" in
+
+	set-deck)
+	#set active deck
+	#---------------------------------------
+
+	# check if deck exists and no spaces in argument
+	if [[ -d "${QME}/${2}" ]] && [[ ${#} -eq 2 ]]
+	then
+
+		echo ${2} >${QME}/active_deck.log
+		echo "Active deck set to:"
+		cat ${QME}/active_deck.log
+	else
+		echo "Deck does not exist" >&2
+		exit 1
+	fi
+
+	;;
 
 	-c)
 	#number of random questions seen this session
