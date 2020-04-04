@@ -1,0 +1,2 @@
+     1	date +%s%N
+     2	date +%s

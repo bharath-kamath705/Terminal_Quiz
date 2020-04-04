@@ -34,7 +34,7 @@
     34	date |tee fulldate.txt | cut --delimiter " " --fields 4
     35	touch file{1..100} ; echo file {1..100} > del.txt ; cat del.txt |xargs rm
     36	mkdir {jan,feb,mar}_{2017..2020} && touch {jan,feb,mar}_{2017..2020}/file{1..9}
-    37	in .bashrc add: alias marco="echo polo"  (then run: source .bashrc)
+    37	in .bashrc add: alias marco="echo polo" 
     38	cd ..
     39	cd / ; cd ~/Desktop/
     40	ls /etc/*.conf
@@ -62,7 +62,7 @@
     62	cat qme_questions.txt | grep "the" -o | wc -l
     63	cat qme_questions.txt | grep "the" -v | wc -l
     64	tar -cvzf qme_backup.tar.gz ./*; (move to desktop); tar -xvzf qme_backup.tar.gz ./
-    65	zip -r qme_backup.zip ./Terminal_Quiz; unzip -l; unzip qme_backup.zip
+    65	zip qme_backup.zip; unzip -l; unzip qme_backup.zip
     66	add this to ~/.bashrc : PATH="$PATH:$HOME/bin2", run this file with the source command, do echo "$PATH"
     67	chmod -x qme;ls -l qme; chmod +x qme; ls -l qme
     68	echo -e '#!bin/bash \necho polo\' >> marco
@@ -78,5 +78,3 @@
     78	cat qme_questions.txt | head -n $(shuf -i 1-20 -n 1) | tail -n 1
     79	echo "hi" && echo "bye"
     80	apt-cache search xeyes; sudo apt-get install x11-apps; sudo apt-get purge x11-apps
-    81	du -h -d 1
-    82	bye
