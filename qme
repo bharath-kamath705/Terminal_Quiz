@@ -3,6 +3,8 @@
 #set directory for qme program and files
 QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+# set default deck
+DECK="deck_basic_linux"
 
 chk_int(){
 
@@ -34,9 +36,9 @@ chk_str(){
 }
 
 # record the question number of most recent random question seen
-if [[ -f $QME/most_recent.log ]]
+if [[ -f ${QME}/${DECK}/most_recent.log ]]
 	then
-		MOST_REC=$(cat ${QME}/most_recent.log | cut --fields 1 | cut -c 1-4 --complement)
+		MOST_REC=$(cat ${QME}/${DECK}/most_recent.log | cut --fields 1 | cut -c 1-4 --complement)
 	else
 		MOST_REC="f" # assigned letter so an integer check fails"
 fi
@@ -45,11 +47,11 @@ if [[ ${#} -eq 0 ]]
 then
 	#show random question     	
 	#----------------------------------------
-	cat $QME/qme_questions.txt | shuf | head -n 1 |tee ${QME}/most_recent.log
+	cat ${QME}/${DECK}/qme_questions.txt | shuf | head -n 1 |tee ${QME}/${DECK}/most_recent.log
 		
 	#logs to keep track of number of random questions shown
-	date >> $QME/qme_session.log  # erased every session
-	date >> $QME/qme_alltime.log
+	date >> ${QME}/${DECK}/qme_session.log  # erased every session
+	date >> ${QME}/${DECK}/qme_alltime.log
 	exit 0
 fi
 
@@ -58,13 +60,13 @@ case "$1" in
 	-c)
 	#number of random questions seen this session
 	#----------------------------------------
-	cat $QME/qme_session.log | wc -l
+	cat ${QME}/${DECK}/qme_session.log | wc -l
 	;;
 
 	-t)
 	#number of random questions in total
 	#----------------------------------------
-	cat $QME/qme_alltime.log | wc -l
+	cat ${QME}/${DECK}/qme_alltime.log | wc -l
 	;;	
 
 	-q|--question)
@@ -73,10 +75,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" $QME/qme_questions.txt
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_questions.txt
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" $QME/qme_questions.txt
+		sed "$2q;d" ${QME}/${DECK}/qme_questions.txt
 	fi
 	;;
 
@@ -86,10 +88,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" $QME/qme_answers.txt
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_answers.txt
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" $QME/qme_answers.txt
+		sed "$2q;d" ${QME}/${DECK}/qme_answers.txt
 	fi
 	;;
 
@@ -103,7 +105,7 @@ case "$1" in
 	chk_int ${Q_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${Q_NUM}q;d" $QME/qme_questions.txt
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt
 	
 	echo
 	read -p "Enter the new question: " QUESTION
@@ -111,12 +113,12 @@ case "$1" in
 	# check for wrong input
 	chk_str ${QUESTION}
 	
-	cat $QME/qme_questions.txt | cut --fields 2 | sed "${Q_NUM} c${QUESTION}"| cat -n >$QME/qtmp.txt
-	rm $QME/qme_questions.txt
-	mv $QME/qtmp.txt $QME/qme_questions.txt
+	cat ${QME}/${DECK}/qme_questions.txt | cut --fields 2 | sed "${Q_NUM} c${QUESTION}"| cat -n >${QME}/${DECK}/qtmp.txt
+	rm ${QME}/${DECK}/qme_questions.txt
+	mv ${QME}/${DECK}/qtmp.txt ${QME}/${DECK}/qme_questions.txt
 
 	echo -e "\nNew Entry:"
-	sed "${Q_NUM}q;d" $QME/qme_questions.txt	
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt	
 	;;
 
 	-f)
@@ -128,7 +130,7 @@ case "$1" in
 	chk_int ${ANS_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${ANS_NUM}q;d" $QME/qme_answers.txt
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt
 	
 	echo
 	read -p "Enter the new answer: " ANS
@@ -137,12 +139,12 @@ case "$1" in
 	chk_str ${ANS}
 	
 	# replace answer on file 
-	cat $QME/qme_answers.txt | cut --fields 2 | sed "$ANS_NUM c$ANS"| cat -n >$QME/atmp.txt
-	rm $QME/qme_answers.txt
-	mv $QME/atmp.txt $QME/qme_answers.txt	
+	cat ${QME}/${DECK}/qme_answers.txt | cut --fields 2 | sed "$ANS_NUM c$ANS"| cat -n >${QME}/${DECK}/atmp.txt
+	rm ${QME}/${DECK}/qme_answers.txt
+	mv ${QME}/${DECK}/atmp.txt ${QME}/${DECK}/qme_answers.txt	
 	
 	echo -e "\nNew Entry:"
-	sed "${ANS_NUM}q;d" $QME/qme_answers.txt
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt
 	;;
 
 	--add)
@@ -158,13 +160,13 @@ case "$1" in
 	# check for wrong input
 	chk_str ${NEW_ANS}
 	
-	echo ${NEW_QUES} | cat -n >>$QME/qme_questions.txt
-	echo ${NEW_ANS} | cat -n >>$QME/qme_answers.txt
-	cut $QME/qme_questions.txt --fields 2 | cat -n > $QME/qme_questions_tmp.txt
-	cut $QME/qme_answers.txt --fields 2 | cat -n > $QME/qme_answers_tmp.txt
-	rm $QME/qme_answers.txt $QME/qme_questions.txt
-	mv $QME/qme_answers_tmp.txt $QME/qme_answers.txt
-	mv $QME/qme_questions_tmp.txt $QME/qme_questions.txt
+	echo ${NEW_QUES} | cat -n >>${QME}/${DECK}/qme_questions.txt
+	echo ${NEW_ANS} | cat -n >>${QME}/${DECK}/qme_answers.txt
+	cut ${QME}/${DECK}/qme_questions.txt --fields 2 | cat -n > ${QME}/${DECK}/qme_questions_tmp.txt
+	cut ${QME}/${DECK}/qme_answers.txt --fields 2 | cat -n > ${QME}/${DECK}/qme_answers_tmp.txt
+	rm ${QME}/${DECK}/qme_answers.txt ${QME}/${DECK}/qme_questions.txt
+	mv ${QME}/${DECK}/qme_answers_tmp.txt ${QME}/${DECK}/qme_answers.txt
+	mv ${QME}/${DECK}/qme_questions_tmp.txt ${QME}/${DECK}/qme_questions.txt
 	echo "Done."
 	;;
 
@@ -176,7 +178,7 @@ case "$1" in
 	
 	# check if input is less than number of questions/answers
 	#total number of question in the question bank
-	NUM_LINES="$(cat $QME/qme_questions.txt | wc -l)"
+	NUM_LINES="$(cat ${QME}/${DECK}/qme_questions.txt | wc -l)"
 	if [[ ${2} -gt ${NUM_LINES} ]]
 	then
 		echo "Invalid input. Enter a number less than or equal to ${NUM_LINES}" >&2
@@ -187,31 +189,31 @@ case "$1" in
 	let bot=$NUM_LINES-$2	
 	
 	#remove question and write to qtmp.txt
-	head $QME/qme_questions.txt -n $top >$QME/qtmp.txt
-	tail $QME/qme_questions.txt -n $bot >>$QME/qtmp.txt
+	head ${QME}/${DECK}/qme_questions.txt -n $top >${QME}/${DECK}/qtmp.txt
+	tail ${QME}/${DECK}/qme_questions.txt -n $bot >>${QME}/${DECK}/qtmp.txt
 
 	#remove answer and write to atmp.txt
-	head $QME/qme_answers.txt -n $top >$QME/atmp.txt
-	tail $QME/qme_answers.txt -n $bot >>$QME/atmp.txt
+	head ${QME}/${DECK}/qme_answers.txt -n $top >${QME}/${DECK}/atmp.txt
+	tail ${QME}/${DECK}/qme_answers.txt -n $bot >>${QME}/${DECK}/atmp.txt
 
 	#re-number lines and remove qtmp.txt and atmp.txt
-	cut $QME/qtmp.txt --fields 2 | cat -n | tee $QME/qme_questions.txt >/dev/null
-	cut $QME/atmp.txt --fields 2 | cat -n | tee $QME/qme_answers.txt >/dev/null	
-	rm $QME/qtmp.txt $QME/atmp.txt	
+	cut ${QME}/${DECK}/qtmp.txt --fields 2 | cat -n | tee ${QME}/${DECK}/qme_questions.txt >/dev/null
+	cut ${QME}/${DECK}/atmp.txt --fields 2 | cat -n | tee ${QME}/${DECK}/qme_answers.txt >/dev/null	
+	rm ${QME}/${DECK}/qtmp.txt ${QME}/${DECK}/atmp.txt	
 	echo "Removed."
 	;;
 
 	--clear-log)
 	#reset the all time log
 	#----------------------------------------
-	rm $QME/qme_alltime.log
+	rm ${QME}/${DECK}/qme_alltime.log
 	;;
 
 	--reset)
 	#reset questions and answers to default
 	#----------------------------------------
-	cp $QME/qme_questions_default.txt $QME/qme_questions.txt
-	cp $QME/qme_answers_default.txt $QME/qme_answers.txt
+	cp ${QME}/${DECK}/qme_questions_default.txt ${QME}/${DECK}/qme_questions.txt
+	cp ${QME}/${DECK}/qme_answers_default.txt ${QME}/${DECK}/qme_answers.txt
 	;;	 
 
 
