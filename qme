@@ -113,10 +113,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_questions.txt
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" ${QME}/${DECK}/qme_questions.txt
+		sed "$2q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
 	fi
 	;;
 
@@ -126,10 +126,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_answers.txt
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" ${QME}/${DECK}/qme_answers.txt
+		sed "$2q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
 	fi
 	;;
 
@@ -143,7 +143,7 @@ case "$1" in
 	chk_int ${Q_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
 	
 	echo
 	read -p "Enter the new question: " QUESTION
@@ -151,12 +151,16 @@ case "$1" in
 	# check for wrong input
 	chk_str ${QUESTION}
 	
+	# replace question and and write question bank to a temporary file
 	cat ${QME}/${DECK}/qme_questions.txt | cut --fields 2 | sed "${Q_NUM} c${QUESTION}"| cat -n >${QME}/${DECK}/qtmp.txt
+
+	# overwrite original with temp file, then delete tmp file
 	rm ${QME}/${DECK}/qme_questions.txt
 	mv ${QME}/${DECK}/qtmp.txt ${QME}/${DECK}/qme_questions.txt
-
+	
+	# display with line breaks on semi-colon
 	echo -e "\nNew Entry:"
-	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt	
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
 	;;
 
 	-f)
@@ -168,7 +172,7 @@ case "$1" in
 	chk_int ${ANS_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
 	
 	echo
 	read -p "Enter the new answer: " ANS
@@ -176,13 +180,16 @@ case "$1" in
 	# check for wrong input
 	chk_str ${ANS}
 	
-	# replace answer on file 
+	# replace answer and and write answer bank to a temporary file
 	cat ${QME}/${DECK}/qme_answers.txt | cut --fields 2 | sed "$ANS_NUM c$ANS"| cat -n >${QME}/${DECK}/atmp.txt
+
+	# overwrite original with temp file, then delete tmp file
 	rm ${QME}/${DECK}/qme_answers.txt
 	mv ${QME}/${DECK}/atmp.txt ${QME}/${DECK}/qme_answers.txt	
 	
+	# display with line breaks on semi-colon
 	echo -e "\nNew Entry:"
-	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
 	;;
 
 	--add)
@@ -198,10 +205,15 @@ case "$1" in
 	# check for wrong input
 	chk_str ${NEW_ANS}
 	
+	# append files with new question and answer with the corrent field delimiter but wrong numbering
 	echo ${NEW_QUES} | cat -n >>${QME}/${DECK}/qme_questions.txt
 	echo ${NEW_ANS} | cat -n >>${QME}/${DECK}/qme_answers.txt
+
+	# re-number questions and answers correctly and write to temp files
 	cut ${QME}/${DECK}/qme_questions.txt --fields 2 | cat -n > ${QME}/${DECK}/qme_questions_tmp.txt
 	cut ${QME}/${DECK}/qme_answers.txt --fields 2 | cat -n > ${QME}/${DECK}/qme_answers_tmp.txt
+	
+	# overwrite originals with temp files and then delete temp files
 	rm ${QME}/${DECK}/qme_answers.txt ${QME}/${DECK}/qme_questions.txt
 	mv ${QME}/${DECK}/qme_answers_tmp.txt ${QME}/${DECK}/qme_answers.txt
 	mv ${QME}/${DECK}/qme_questions_tmp.txt ${QME}/${DECK}/qme_questions.txt
