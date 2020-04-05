@@ -7,7 +7,7 @@ QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 DECK=$(cat ${QME}/active_deck.log 2>/dev/null)
 
 # check if deck exists active deck log exists and is not empty
-# permit only set-deck argument to be serviced
+# permit only set-deck or ls argument to be serviced
 if [[ ${1} = "set-deck" ]] || [[ ${1} = "ls" ]]
 then
 	true # do nothing
@@ -87,6 +87,12 @@ case "$1" in
 		exit 1
 	fi
 
+	;;
+
+	ls)
+	# list availabe decks
+	#----------------------------------------
+	ls -F "${QME}" | grep /
 	;;
 
 	-c)
