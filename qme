@@ -4,7 +4,21 @@
 QME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # set default deck
-DECK=$(cat ${QME}/active_deck.log)
+DECK=$(cat ${QME}/active_deck.log 2>/dev/null)
+
+# check if deck exists active deck log exists and is not empty
+# permit only set-deck argument to be serviced
+if [[ ${1} = "set-deck" ]] || [[ ${1} = "ls" ]]
+then
+	true # do nothing
+
+elif [[ ! -d "${QME}/${DECK}" ]]|| [[ ! -s "${QME}/active_deck.log" ]]
+then
+	echo "Active deck is not set" >&2
+	echo "To see available decks: qme ls" >&2
+	echo "To set active deck: qme set-deck <deckname>" >&2
+	exit 1
+fi
 
 chk_int(){
 
@@ -88,7 +102,7 @@ case "$1" in
 	;;	
 
 	-q|--question)
-	#Show Nth question  
+	#Show  most recent or Nth question  
 	#----------------------------------------
 	if [[ ${#} -eq 1 ]]
 	then
@@ -101,7 +115,7 @@ case "$1" in
 	;;
 
 	-a|--answer)
-	#Show Nth answer  
+	#Show most recent or Nth answer  
 	#----------------------------------------
 	if [[ ${#} -eq 1 ]]
 	then
