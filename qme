@@ -61,8 +61,13 @@ if [[ ${#} -eq 0 ]]
 then
 	#show random question     	
 	#----------------------------------------
-	cat ${QME}/${DECK}/qme_questions.txt | shuf | head -n 1 |tee ${QME}/${DECK}/most_recent.log
+
+	# write a random question to most_recent.log
+	cat ${QME}/${DECK}/qme_questions.txt | shuf | head -n 1 > ${QME}/${DECK}/most_recent.log
 		
+	# display random question with line breaks on semi-colons
+	cat ${QME}/${DECK}/most_recent.log | sed "s/;/\n/g"
+
 	#logs to keep track of number of random questions shown
 	date >> ${QME}/${DECK}/qme_session.log  # erased every session
 	date >> ${QME}/${DECK}/qme_alltime.log
@@ -92,7 +97,14 @@ case "$1" in
 	ls)
 	# list availabe decks
 	#----------------------------------------
+	echo "Available Decks:"
 	ls -F "${QME}" | grep /
+	;;
+
+	ad)
+	# show active deck
+	#-----------------------------------------
+	echo "Active Deck: ${DECK}"
 	;;
 
 	-c)
