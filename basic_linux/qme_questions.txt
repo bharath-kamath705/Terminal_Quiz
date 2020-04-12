@@ -79,4 +79,3 @@
     79	use the AND operator to echo "hi" and then echo "bye"
     80	search which package has the 'xeyes' app. Install it, then remove it
     81	show the size of all files and folders in ~/ (human readable)
-    82	hi
