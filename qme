@@ -69,8 +69,8 @@ then
 	cat ${QME}/${DECK}/most_recent.log | sed "s/;/\n/g"
 
 	#logs to keep track of number of random questions shown
-	date >> ${QME}/${DECK}/qme_session.log  # erased every session
-	date >> ${QME}/${DECK}/qme_alltime.log
+	date >> ${QME}/qme_session.log  # erased every session
+	date >> ${QME}/qme_alltime.log
 	exit 0
 fi
 
@@ -110,13 +110,13 @@ case "$1" in
 	-c)
 	#number of random questions seen this session
 	#----------------------------------------
-	cat ${QME}/${DECK}/qme_session.log | wc -l
+	cat ${QME}/qme_session.log | wc -l
 	;;
 
 	-t)
 	#number of random questions in total
 	#----------------------------------------
-	cat ${QME}/${DECK}/qme_alltime.log | wc -l
+	cat ${QME}/qme_alltime.log | wc -l
 	;;	
 
 	-q|--question)
