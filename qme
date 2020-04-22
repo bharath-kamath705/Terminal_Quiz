@@ -66,7 +66,7 @@ then
 	cat ${QME}/${DECK}/qme_questions.txt | shuf | head -n 1 > ${QME}/${DECK}/most_recent.log
 		
 	# display random question with line breaks on semi-colons
-	cat ${QME}/${DECK}/most_recent.log | sed "s/;/\n/g"
+	cat ${QME}/${DECK}/most_recent.log | sed 's/\\n/\n/g'
 
 	#logs to keep track of number of random questions shown
 	date >> ${QME}/qme_session.log  # erased every session
@@ -125,10 +125,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_questions.txt | sed 's/\\n/\n/g'
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
+		sed "$2q;d" ${QME}/${DECK}/qme_questions.txt | sed 's/\\n/\n/g'
 	fi
 	;;
 
@@ -138,10 +138,10 @@ case "$1" in
 	if [[ ${#} -eq 1 ]]
 	then
 		chk_int ${MOST_REC} # fail if most recent question does not exist
-		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
+		sed "${MOST_REC}q;d" ${QME}/${DECK}/qme_answers.txt | sed 's/\\n/\n/g'
 	else
 		chk_int $2 # check for valid argument
-		sed "$2q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
+		sed "$2q;d" ${QME}/${DECK}/qme_answers.txt | sed 's/\\n/\n/g'
 	fi
 	;;
 
@@ -155,7 +155,7 @@ case "$1" in
 	chk_int ${Q_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed 's/\\n/\n/g'
 	
 	echo
 	read -p "Enter the new question: " QUESTION
@@ -172,7 +172,7 @@ case "$1" in
 	
 	# display with line breaks on semi-colon
 	echo -e "\nNew Entry:"
-	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed "s/;/\n/g"
+	sed "${Q_NUM}q;d" ${QME}/${DECK}/qme_questions.txt | sed 's/\\n/\n/g'
 	;;
 
 	-f)
@@ -184,7 +184,7 @@ case "$1" in
 	chk_int ${ANS_NUM}
 	
 	echo -e "\nCurrent Entry:"
-	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed 's/\\n/\n/g'
 	
 	echo
 	read -p "Enter the new answer: " ANS
@@ -201,7 +201,7 @@ case "$1" in
 	
 	# display with line breaks on semi-colon
 	echo -e "\nNew Entry:"
-	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed "s/;/\n/g"
+	sed "${ANS_NUM}q;d" ${QME}/${DECK}/qme_answers.txt | sed 's/\\n/\n/g'
 	;;
 
 	--add)
